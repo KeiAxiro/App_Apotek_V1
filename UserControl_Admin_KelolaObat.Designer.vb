@@ -67,7 +67,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 180)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(318, 37)
+        Me.Panel2.Size = New System.Drawing.Size(314, 37)
         Me.Panel2.TabIndex = 6
         '
         'TextBox_KelolaUser_Cari
@@ -78,7 +78,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.TextBox_KelolaUser_Cari.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_KelolaUser_Cari.Location = New System.Drawing.Point(57, 5)
         Me.TextBox_KelolaUser_Cari.Name = "TextBox_KelolaUser_Cari"
-        Me.TextBox_KelolaUser_Cari.Size = New System.Drawing.Size(245, 27)
+        Me.TextBox_KelolaUser_Cari.Size = New System.Drawing.Size(241, 27)
         Me.TextBox_KelolaUser_Cari.TabIndex = 3
         '
         'Label_KelolaUser_Cari
@@ -100,7 +100,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Panel_Telepon.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Telepon.Location = New System.Drawing.Point(0, 120)
         Me.Panel_Telepon.Name = "Panel_Telepon"
-        Me.Panel_Telepon.Size = New System.Drawing.Size(317, 60)
+        Me.Panel_Telepon.Size = New System.Drawing.Size(312, 60)
         Me.Panel_Telepon.TabIndex = 2
         '
         'Label_Telepon
@@ -121,7 +121,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.TextBox_TipeUser.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_TipeUser.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_TipeUser.Name = "TextBox_TipeUser"
-        Me.TextBox_TipeUser.Size = New System.Drawing.Size(282, 20)
+        Me.TextBox_TipeUser.Size = New System.Drawing.Size(277, 20)
         Me.TextBox_TipeUser.TabIndex = 1
         '
         'TextBox_Alamat
@@ -132,7 +132,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.TextBox_Alamat.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_Alamat.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_Alamat.Name = "TextBox_Alamat"
-        Me.TextBox_Alamat.Size = New System.Drawing.Size(284, 20)
+        Me.TextBox_Alamat.Size = New System.Drawing.Size(280, 20)
         Me.TextBox_Alamat.TabIndex = 1
         '
         'Panel_Nama
@@ -142,7 +142,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Panel_Nama.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Nama.Location = New System.Drawing.Point(0, 60)
         Me.Panel_Nama.Name = "Panel_Nama"
-        Me.Panel_Nama.Size = New System.Drawing.Size(317, 60)
+        Me.Panel_Nama.Size = New System.Drawing.Size(312, 60)
         Me.Panel_Nama.TabIndex = 1
         '
         'Label_Nama
@@ -163,7 +163,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.TextBox_Nama.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_Nama.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_Nama.Name = "TextBox_Nama"
-        Me.TextBox_Nama.Size = New System.Drawing.Size(283, 20)
+        Me.TextBox_Nama.Size = New System.Drawing.Size(278, 20)
         Me.TextBox_Nama.TabIndex = 1
         '
         'Label_Alamat
@@ -185,7 +185,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Panel_Alamat.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Alamat.Location = New System.Drawing.Point(0, 0)
         Me.Panel_Alamat.Name = "Panel_Alamat"
-        Me.Panel_Alamat.Size = New System.Drawing.Size(318, 60)
+        Me.Panel_Alamat.Size = New System.Drawing.Size(314, 60)
         Me.Panel_Alamat.TabIndex = 3
         '
         'Panel_TipeUser
@@ -195,7 +195,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Panel_TipeUser.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_TipeUser.Location = New System.Drawing.Point(0, 0)
         Me.Panel_TipeUser.Name = "Panel_TipeUser"
-        Me.Panel_TipeUser.Size = New System.Drawing.Size(317, 60)
+        Me.Panel_TipeUser.Size = New System.Drawing.Size(312, 60)
         Me.Panel_TipeUser.TabIndex = 0
         '
         'ComboBox_TipeUser
@@ -206,7 +206,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.ComboBox_TipeUser.FormattingEnabled = True
         Me.ComboBox_TipeUser.Location = New System.Drawing.Point(18, 25)
         Me.ComboBox_TipeUser.Name = "ComboBox_TipeUser"
-        Me.ComboBox_TipeUser.Size = New System.Drawing.Size(283, 27)
+        Me.ComboBox_TipeUser.Size = New System.Drawing.Size(278, 27)
         Me.ComboBox_TipeUser.TabIndex = 3
         '
         'Label_Tipe_User
@@ -239,7 +239,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.TextBox_Username.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_Username.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_Username.Name = "TextBox_Username"
-        Me.TextBox_Username.Size = New System.Drawing.Size(284, 20)
+        Me.TextBox_Username.Size = New System.Drawing.Size(280, 20)
         Me.TextBox_Username.TabIndex = 1
         '
         'Button_KelolaUser_Hapus
@@ -269,7 +269,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Panel_Username.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Username.Location = New System.Drawing.Point(0, 60)
         Me.Panel_Username.Name = "Panel_Username"
-        Me.Panel_Username.Size = New System.Drawing.Size(318, 60)
+        Me.Panel_Username.Size = New System.Drawing.Size(314, 60)
         Me.Panel_Username.TabIndex = 4
         '
         'Button_KelolaUser_Tambah
@@ -287,7 +287,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Panel_Password.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Password.Location = New System.Drawing.Point(0, 120)
         Me.Panel_Password.Name = "Panel_Password"
-        Me.Panel_Password.Size = New System.Drawing.Size(318, 60)
+        Me.Panel_Password.Size = New System.Drawing.Size(314, 60)
         Me.Panel_Password.TabIndex = 5
         '
         'DataGridView_KelolaUser
@@ -303,6 +303,7 @@ Partial Class UserControl_Admin_KelolaObat
         '
         'SplitContainer_Admin_KelolaUser
         '
+        Me.SplitContainer_Admin_KelolaUser.BackColor = System.Drawing.Color.White
         Me.SplitContainer_Admin_KelolaUser.Dock = System.Windows.Forms.DockStyle.Top
         Me.SplitContainer_Admin_KelolaUser.IsSplitterFixed = True
         Me.SplitContainer_Admin_KelolaUser.Location = New System.Drawing.Point(0, 38)
@@ -324,8 +325,8 @@ Partial Class UserControl_Admin_KelolaObat
         Me.SplitContainer_Admin_KelolaUser.Panel2.Controls.Add(Me.Panel_Username)
         Me.SplitContainer_Admin_KelolaUser.Panel2.Controls.Add(Me.Panel_Alamat)
         Me.SplitContainer_Admin_KelolaUser.Size = New System.Drawing.Size(636, 217)
-        Me.SplitContainer_Admin_KelolaUser.SplitterDistance = 317
-        Me.SplitContainer_Admin_KelolaUser.SplitterWidth = 1
+        Me.SplitContainer_Admin_KelolaUser.SplitterDistance = 312
+        Me.SplitContainer_Admin_KelolaUser.SplitterWidth = 10
         Me.SplitContainer_Admin_KelolaUser.TabIndex = 2
         '
         'Label_KelolaUser

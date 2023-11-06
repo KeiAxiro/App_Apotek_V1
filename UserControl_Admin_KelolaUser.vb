@@ -1,9 +1,10 @@
 ﻿Public Class UserControl_Admin_KelolaUser
     Private Sub SplitContainer_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer_Admin_KelolaUser.Paint
-        Dim Pen As New Pen(Color.FromArgb(255, 0, 0, 0), 10)
-
+        Dim Pen As New Pen(Color.FromArgb(255, 0, 165, 0), 20)
+        Dim SplitSize As Point = SplitContainer_Admin_KelolaUser.Size
+        Dim CenterSplitContainer As Integer = SplitSize.X / 2
         Using Pen
-
+            e.Graphics.DrawLine(Pen, New Point(CenterSplitContainer, 0), New Point(CenterSplitContainer, SplitSize.Y))
         End Using
     End Sub
 
