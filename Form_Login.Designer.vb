@@ -120,6 +120,7 @@ Partial Class Form_Login
         '
         'Button_Login
         '
+        Me.Button_Login.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Login.Location = New System.Drawing.Point(71, 297)
         Me.Button_Login.Name = "Button_Login"
         Me.Button_Login.Size = New System.Drawing.Size(131, 50)
@@ -129,6 +130,7 @@ Partial Class Form_Login
         '
         'Button_Reset
         '
+        Me.Button_Reset.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Reset.Location = New System.Drawing.Point(300, 297)
         Me.Button_Reset.Name = "Button_Reset"
         Me.Button_Reset.Size = New System.Drawing.Size(131, 50)

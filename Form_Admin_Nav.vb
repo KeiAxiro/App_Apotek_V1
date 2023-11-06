@@ -18,11 +18,11 @@
     End Sub
 
     Private Sub Button_Admin_KelolaUser_Click(sender As Object, e As EventArgs) Handles Button_Admin_KelolaUser.Click
-        Dim Admin_KelolaUser = New UserControl_Admin_KelolaUser
-        Admin_KelolaUser.Dock = DockStyle.Fill
-        ChangePanel(Admin_KelolaUser)
+        ChangePanel(New UserControl_Admin_KelolaUser)
     End Sub
-
+    Private Sub Button_Admin_KelolaObat_Click(sender As Object, e As EventArgs) Handles Button_Admin_KelolaObat.Click
+        ChangePanel(New UserControl_Admin_KelolaObat)
+    End Sub
     Private Sub Button_Admin_Logout_Click(sender As Object, e As EventArgs) Handles Button_Admin_Logout.Click
         Form_Login.Show()
         Me.Hide()

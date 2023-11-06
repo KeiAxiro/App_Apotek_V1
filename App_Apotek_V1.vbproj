@@ -102,6 +102,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserControl_Admin_KelolaObat.Designer.vb">
+      <DependentUpon>UserControl_Admin_KelolaObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Admin_KelolaObat.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControl_Admin_KelolaUser.Designer.vb">
       <DependentUpon>UserControl_Admin_KelolaUser.vb</DependentUpon>
     </Compile>
@@ -127,6 +133,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin_KelolaObat.resx">
+      <DependentUpon>UserControl_Admin_KelolaObat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin_KelolaUser.resx">
       <DependentUpon>UserControl_Admin_KelolaUser.vb</DependentUpon>
