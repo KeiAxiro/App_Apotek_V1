@@ -80,6 +80,18 @@
     <Compile Include="Form_Admin_Nav.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Apoteker.Designer.vb">
+      <DependentUpon>Form_Apoteker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Apoteker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kasir.Designer.vb">
+      <DependentUpon>Form_Kasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kasir.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Form_Admin_Nav.resx">
       <DependentUpon>Form_Admin_Nav.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Apoteker.resx">
+      <DependentUpon>Form_Apoteker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kasir.resx">
+      <DependentUpon>Form_Kasir.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>

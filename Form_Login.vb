@@ -17,12 +17,13 @@
             If Get_TipeUser.ToLower = "admin" Then
                 Form_Admin_Nav.Show()
                 Form_Admin_Nav.ChangePanel(New UserControl_Admin_LogActivity)
-                Call Write_Log("Login", 1)
             ElseIf Get_TipeUser.ToLower = "kasir" Then
 
             ElseIf Get_TipeUser.ToLower = "apoteker" Then
+                Form_Apoteker.Show()
 
             End If
+            Call Write_Log("Login", 1)
             Me.Hide()
         Else
             MsgBox("Username dan Password Salah!")

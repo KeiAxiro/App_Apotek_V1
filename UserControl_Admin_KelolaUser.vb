@@ -27,7 +27,7 @@
         End Using
     End Sub
 
-    Private Sub TextBox_Input_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Nama.Paint, Panel_Telepon.Paint, Panel_Alamat.Paint, Panel_Username.Paint, Panel_Password.Paint
+    Private Sub Panel_Input_Paint(sender As Object, e As PaintEventArgs) Handles Panel_Nama.Paint, Panel_Telepon.Paint, Panel_Alamat.Paint, Panel_Username.Paint, Panel_Password.Paint
         Dim Pen As New Pen(Color.FromArgb(165, 0, 0, 0), 2)
         Dim Psize As Point = Panel_Nama.Size
         Dim TextBoxSize As Point = TextBox_Nama.Size
