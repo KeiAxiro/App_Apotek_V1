@@ -53,6 +53,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -102,6 +103,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserControl_Admin_KelolaLaporan.Designer.vb">
+      <DependentUpon>UserControl_Admin_KelolaLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Admin_KelolaLaporan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControl_Admin_KelolaObat.Designer.vb">
       <DependentUpon>UserControl_Admin_KelolaObat.vb</DependentUpon>
     </Compile>
@@ -133,6 +140,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin_KelolaLaporan.resx">
+      <DependentUpon>UserControl_Admin_KelolaLaporan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin_KelolaObat.resx">
       <DependentUpon>UserControl_Admin_KelolaObat.vb</DependentUpon>

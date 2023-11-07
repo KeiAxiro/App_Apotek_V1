@@ -156,7 +156,7 @@ Partial Class Form_Admin_Nav
         Me.ClientSize = New System.Drawing.Size(784, 411)
         Me.Controls.Add(Me.SplitContainer_Login)
         Me.Name = "Form_Admin_Nav"
-        Me.Text = "Form_Admin_Nav"
+        Me.Text = "Form Navigasi Admin"
         Me.SplitContainer_Login.Panel1.ResumeLayout(False)
         Me.SplitContainer_Login.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer_Login, System.ComponentModel.ISupportInitialize).EndInit()

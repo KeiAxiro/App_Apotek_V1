@@ -23,6 +23,9 @@
     Private Sub Button_Admin_KelolaObat_Click(sender As Object, e As EventArgs) Handles Button_Admin_KelolaObat.Click
         ChangePanel(New UserControl_Admin_KelolaObat)
     End Sub
+    Private Sub Button_Admin_KelolaLaporan_Click(sender As Object, e As EventArgs) Handles Button_Admin_KelolaLaporan.Click
+        ChangePanel(New UserControl_Admin_KelolaLaporan)
+    End Sub
     Private Sub Button_Admin_Logout_Click(sender As Object, e As EventArgs) Handles Button_Admin_Logout.Click
         Form_Login.Show()
         Me.Hide()
