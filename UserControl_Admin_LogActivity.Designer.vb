@@ -50,6 +50,7 @@ Partial Class UserControl_Admin_LogActivity
         Me.DataGridView_Admin_LogActivity.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView_Admin_LogActivity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView_Admin_LogActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_Admin_LogActivity.Location = New System.Drawing.Point(18, 41)
         Me.DataGridView_Admin_LogActivity.Name = "DataGridView_Admin_LogActivity"

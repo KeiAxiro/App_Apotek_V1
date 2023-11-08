@@ -7,7 +7,10 @@ Module Module_Db_Connection
     Public Srd As SqlDataReader
     Public Ds As DataSet
     Sub Koneksi()
-        Dim MyDB As String = "Data Source=DESKTOP-IG5QTRU\SQLEXPRESS;User ID=keidjaru;Password=kei;initial catalog=Db_Apotek"
+        'Pc Sekolah
+        'Dim MyDB As String = "Data Source=DESKTOP-IG5QTRU\SQLEXPRESS;User ID=keidjaru;Password=kei;initial catalog=Db_Apotek"
+        'Laptop
+        Dim MyDB As String = "Data Source=DESKTOP-34EMTUJ;User ID=keidjaru;Password=kei;initial catalog=Db_Apotek"
         Conn = New SqlConnection(MyDB)
         If Conn.State = ConnectionState.Closed Then
             Try

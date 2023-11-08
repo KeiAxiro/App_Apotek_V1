@@ -13,10 +13,11 @@
         Sda = New SqlClient.SqlDataAdapter(GetDataLog, Conn)
         Ds = New DataSet
         Sda.Fill(Ds, "Tbl_Log")
-        DataGridView_Admin_LogActivity.DataSource = Ds.Tables("Tbl_Log")
-    End Sub
 
-    Private Sub DateTimePicker_Admin_LogActivity_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker_Admin_LogActivity.ValueChanged
+        DataGridView_Admin_LogActivity.DataSource = Ds.Tables("Tbl_Log")
+
+        DataGridView_Admin_LogActivity.Columns("Waktu").Resizable = DataGridViewTriState.True
+        DataGridView_Admin_LogActivity.Columns("Waktu").DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss"
 
     End Sub
 End Class
