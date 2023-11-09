@@ -3,7 +3,7 @@
         ChangePanel(New UserControl_Admin_LogActivity())
     End Sub
 
-    Private Sub Form_Admin_Nav_Disposed(sender As Object, e As EventArgs) Handles Me.Disposed, Me.Closed, Me.Deactivate
+    Private Sub Form_Admin_Nav_Disposed(sender As Object, e As EventArgs) Handles Me.Disposed, Me.Closed
         Form_Login.Show()
     End Sub
 
