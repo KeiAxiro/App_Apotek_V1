@@ -6,6 +6,31 @@
 
     Sub Kondisi_Awal()
         Call Show_Grid_KelolaUser()
+        Call Kondisi_Input(False)
+        Call Clear_Input()
+
+        Button_KelolaUser_Tambah.Enabled = True
+        Button_KelolaUser_Edit.Enabled = False
+        Button_KelolaUser_Hapus.Enabled = False
+    End Sub
+
+    Sub Kondisi_Input(kondisi)
+        ComboBox_TipeUser.Enabled = kondisi
+        TextBox_Nama.Enabled = kondisi
+        TextBox_Telepon.Enabled = kondisi
+        TextBox_Alamat.Enabled = kondisi
+        TextBox_Username.Enabled = kondisi
+        TextBox_Password.Enabled = kondisi
+    End Sub
+
+    Sub Clear_Input()
+        ComboBox_TipeUser.Text = ""
+        TextBox_Nama.Clear()
+        TextBox_Telepon.Clear()
+        TextBox_Alamat.Clear()
+        TextBox_Username.Clear()
+        TextBox_Password.Clear()
+        TextBox_KelolaUser_Cari.Clear()
     End Sub
 
     Private Sub Show_Grid_KelolaUser()
@@ -41,8 +66,52 @@
 
     Private Sub DataGridView_KelolaUser_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView_KelolaUser.CellClick
         If e.RowIndex >= 0 Then
-            MsgBox("Kamu Klik: " & e.RowIndex)
+            Call Koneksi()
+            Dim SelectedRow As DataGridViewRow = DataGridView_KelolaUser.Rows(e.RowIndex)
+            Dim IdValue As String = SelectedRow.Cells(0).Value.ToString
+            Dim GetDataUserFromId As String = "SELECT * FROM Tbl_User WHERE Id_User = @P_Id_User"
+
+            Cmd = New SqlClient.SqlCommand(GetDataUserFromId, Conn)
+            Cmd.Parameters.AddWithValue("@P_Id_User", IdValue)
+            If Not IdValue = "" Then
+                Srd = Cmd.ExecuteReader
+
+                Srd.Read()
+                If Srd.HasRows And Not Srd.Item("Username").Equals("") Then
+                    ComboBox_TipeUser.Text = Srd.Item("Tipe_User")
+                    TextBox_Nama.Text = Srd.Item("Nama_User")
+                    TextBox_Alamat.Text = Srd.Item("Alamat")
+                    TextBox_Telepon.Text = Srd.Item("Telepon")
+                    TextBox_Username.Text = Srd.Item("Username")
+                    TextBox_Password.Text = Srd.Item("Password")
+
+                    Button_KelolaUser_Tambah.Enabled = True
+                    Button_KelolaUser_Edit.Enabled = True
+                    Button_KelolaUser_Hapus.Enabled = True
+                Else
+                    MsgBox("tambah")
+                End If
+            Else
+                MsgBox("tambah")
+            End If
         End If
     End Sub
 
+    Private Sub Button_KelolaUser_Tambah_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Tambah.Click
+
+    End Sub
+    Private Sub Tambah_User()
+        Call Koneksi()
+        Call Kondisi_Input(True)
+        Call Clear_Input()
+
+    End Sub
+
+    Private Sub Button_KelolaUser_Edit_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Edit.Click
+
+    End Sub
+
+    Private Sub Button_KelolaUser_Hapus_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Hapus.Click
+
+    End Sub
 End Class

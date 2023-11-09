@@ -2,6 +2,12 @@
 
     'Login
     Private Sub Button_Login_Click(sender As Object, e As EventArgs) Handles Button_Login.Click
+        Call Login()
+    End Sub
+    Private Sub TextBox_KeyPress_Enter(sender As Object, e As KeyPressEventArgs) Handles TextBox_Login_Username.KeyPress, TextBox_Login_Password.KeyPress
+        Call Login()
+    End Sub
+    Private Sub Login()
         Call Koneksi()
         Dim GetUserData As String = "SELECT * FROM Tbl_User WHERE Username = @P_Username AND Password = @P_Password"
         Dim Username_TextValue As String = TextBox_Login_Username.Text
