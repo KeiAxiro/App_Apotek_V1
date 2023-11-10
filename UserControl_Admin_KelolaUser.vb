@@ -12,6 +12,10 @@
         Button_KelolaUser_Tambah.Enabled = True
         Button_KelolaUser_Edit.Enabled = False
         Button_KelolaUser_Hapus.Enabled = False
+
+        Button_KelolaUser_Hapus.Text = "Hapus"
+
+        DataGridView_KelolaUser.Enabled = True
     End Sub
 
     Sub Kondisi_Input(kondisi)
@@ -31,6 +35,8 @@
         TextBox_Username.Clear()
         TextBox_Password.Clear()
         TextBox_KelolaUser_Cari.Clear()
+
+        Label_Admin_Id_User.Text = ""
     End Sub
 
     Private Sub Show_Grid_KelolaUser()
@@ -74,11 +80,11 @@
 
             Cmd = New SqlClient.SqlCommand(GetDataUserFromId, Conn)
             Cmd.Parameters.AddWithValue("@P_Id_User", IdValue)
-            If Not IdValue = "" Then
+            If IdValue <> "" Then
                 Srd = Cmd.ExecuteReader
 
                 Srd.Read()
-                If Srd.HasRows And Not Srd.Item("Tipe_User").Equals("RESET") Then
+                If Srd.HasRows AndAlso Not Srd.Item("Tipe_User").Equals("RESET") Then
                     Label_Admin_Id_User.Text = IdValue
                     ComboBox_TipeUser.Text = Srd.Item("Tipe_User")
                     TextBox_Nama.Text = Srd.Item("Nama_User")
@@ -103,11 +109,16 @@
         If Button_KelolaUser_Tambah.Text.ToLower = "tambah" Then
             Button_KelolaUser_Tambah.Text = "Simpan"
             Call Kondisi_Input(True)
+            DataGridView_KelolaUser.Enabled = False
             Call Clear_Input()
         ElseIf Button_KelolaUser_Tambah.Text.ToLower = "simpan" Then
-            Button_KelolaUser_Tambah.Text = "Tambah"
-            Call Tambah_User()
-            Call Kondisi_Awal()
+            If ComboBox_TipeUser.Text <> "" AndAlso TextBox_Nama.Text <> "" AndAlso TextBox_Telepon.Text <> "" AndAlso TextBox_Alamat.Text <> "" AndAlso TextBox_Username.Text <> "" Then
+                Button_KelolaUser_Tambah.Text = "Tambah"
+                Call Tambah_User()
+                Call Kondisi_Awal()
+            Else
+                MsgBox("Masukan Input Dengan Benar!")
+            End If
         End If
     End Sub
     Private Sub Tambah_User()
@@ -155,6 +166,18 @@
     End Sub
 
     Private Sub Button_KelolaUser_Hapus_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Hapus.Click
+        If Label_Admin_Id_User.Text <> "" Then
+            Call Hapus_user()
+            Call Kondisi_Awal()
+        End If
+    End Sub
+    Private Sub Hapus_user()
+        Call Koneksi()
+        Dim DeleteUser As String = "DELETE FROM Tbl_User WHERE Id_User = @P_Id_User"
+        Cmd = New SqlClient.SqlCommand(DeleteUser, Conn)
+        Cmd.Parameters.AddWithValue("@P_Id_User", Label_Admin_Id_User.Text.ToString)
+
+        Cmd.ExecuteNonQuery()
 
     End Sub
 End Class
