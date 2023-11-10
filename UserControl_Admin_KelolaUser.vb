@@ -47,6 +47,7 @@
         Dim SplitSize As Point = SplitContainer_Admin_KelolaUser.Size
         Dim CenterSplitContainer As Integer = SplitSize.X / 2
         Dim Gap As Integer = 10
+
         Using Pen
             e.Graphics.DrawLine(Pen, New Point(CenterSplitContainer, Gap), New Point(CenterSplitContainer, SplitSize.Y - Gap * 4))
         End Using
@@ -77,7 +78,8 @@
                 Srd = Cmd.ExecuteReader
 
                 Srd.Read()
-                If Srd.HasRows And Not Srd.Item("Username").Equals("") Then
+                If Srd.HasRows And Not Srd.Item("Tipe_User").Equals("RESET") Then
+                    Label_Admin_Id_User.Text = IdValue
                     ComboBox_TipeUser.Text = Srd.Item("Tipe_User")
                     TextBox_Nama.Text = Srd.Item("Nama_User")
                     TextBox_Alamat.Text = Srd.Item("Alamat")
@@ -98,17 +100,58 @@
     End Sub
 
     Private Sub Button_KelolaUser_Tambah_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Tambah.Click
-
+        If Button_KelolaUser_Tambah.Text.ToLower = "tambah" Then
+            Button_KelolaUser_Tambah.Text = "Simpan"
+            Call Kondisi_Input(True)
+            Call Clear_Input()
+        ElseIf Button_KelolaUser_Tambah.Text.ToLower = "simpan" Then
+            Button_KelolaUser_Tambah.Text = "Tambah"
+            Call Tambah_User()
+            Call Kondisi_Awal()
+        End If
     End Sub
     Private Sub Tambah_User()
         Call Koneksi()
-        Call Kondisi_Input(True)
-        Call Clear_Input()
+        Dim InsertDataUser As String = "INSERT INTO Tbl_User(Tipe_User,Nama_User,Alamat,Telepon,Username,Password) Values(@P_Tipe_User,@P_Nama_User,@P_Alamat,@P_Telepon,@P_Username,@P_Password)"
+        Cmd = New SqlClient.SqlCommand(InsertDataUser, Conn)
+        'Parameter
+        Cmd.Parameters.AddWithValue("@P_Tipe_User", ComboBox_TipeUser.Text)
+        Cmd.Parameters.AddWithValue("@P_Nama_User", TextBox_Nama.Text)
+        Cmd.Parameters.AddWithValue("@P_Alamat", TextBox_Alamat.Text)
+        Cmd.Parameters.AddWithValue("@P_Telepon", TextBox_Telepon.Text)
+        Cmd.Parameters.AddWithValue("@P_Username", TextBox_Username.Text)
+        Cmd.Parameters.AddWithValue("@P_Password", TextBox_Password.Text)
+
+        Cmd.ExecuteNonQuery()
 
     End Sub
 
     Private Sub Button_KelolaUser_Edit_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Edit.Click
+        If Button_KelolaUser_Edit.Text.ToLower = "edit" Then
 
+            Button_KelolaUser_Edit.Text = "Simpan"
+            Call Kondisi_Input(True)
+        ElseIf Button_KelolaUser_Edit.Text.ToLower = "simpan" Then
+            Call Edit_User()
+            Call Kondisi_Awal()
+        End If
+    End Sub
+
+    Private Sub Edit_User()
+        Call Koneksi()
+        Dim UpdateDataUser As String = "UPDATE Tbl_User Set Tipe_User = @P_Tipe_User,Nama_User = @P_Nama_User,Alamat = @P_Alamat,Telepon = @P_Telepon,Username = @P_Username,Password = @P_Password WHERE Id_User = @P_Id_User"
+        Cmd = New SqlClient.SqlCommand(UpdateDataUser, Conn)
+
+        Cmd.Parameters.AddWithValue("@P_Tipe_User", ComboBox_TipeUser.Text)
+        Cmd.Parameters.AddWithValue("@P_Nama_User", TextBox_Nama.Text)
+        Cmd.Parameters.AddWithValue("@P_Alamat", TextBox_Alamat.Text)
+        Cmd.Parameters.AddWithValue("@P_Telepon", TextBox_Telepon.Text)
+        Cmd.Parameters.AddWithValue("@P_Username", TextBox_Username.Text)
+        Cmd.Parameters.AddWithValue("@P_Password", TextBox_Password.Text)
+
+        Cmd.Parameters.AddWithValue("@P_Id_User", Label_Admin_Id_User.Text.ToString)
+
+        Cmd.ExecuteNonQuery()
     End Sub
 
     Private Sub Button_KelolaUser_Hapus_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Hapus.Click

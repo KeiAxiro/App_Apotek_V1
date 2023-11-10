@@ -1,6 +1,6 @@
 ﻿Public Class UserControl_Admin_LogActivity
 
-    Private Sub UserControl_Admin_LogActivity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub UserControl_Admin_LogActivity_Load(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Load, Me.ControlAdded
         Call Show_Grid_LogActivity()
     End Sub
     Private Sub Button_Admin_LogActivity_Load_Click(sender As Object, e As EventArgs) Handles Button_Admin_LogActivity_Load.Click
@@ -15,9 +15,6 @@
         Sda.Fill(Ds, "Tbl_Log")
 
         DataGridView_Admin_LogActivity.DataSource = Ds.Tables("Tbl_Log")
-
-        DataGridView_Admin_LogActivity.Columns("Waktu").Resizable = DataGridViewTriState.True
-        DataGridView_Admin_LogActivity.Columns("Waktu").DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss"
 
     End Sub
 End Class

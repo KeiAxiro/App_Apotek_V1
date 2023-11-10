@@ -5,7 +5,9 @@
         Call Login()
     End Sub
     Private Sub TextBox_KeyPress_Enter(sender As Object, e As KeyPressEventArgs) Handles TextBox_Login_Username.KeyPress, TextBox_Login_Password.KeyPress
-        Call Login()
+        If e.KeyChar = Chr(13) Then
+            Call Login()
+        End If
     End Sub
     Private Sub Login()
         Call Koneksi()
@@ -29,7 +31,7 @@
                 Form_Apoteker.Show()
 
             End If
-            Call Write_Log("Login", 1)
+            Call Write_Log("Login", Srd.Item("Id_User"))
             Me.Hide()
         Else
             MsgBox("Username dan Password Salah!")

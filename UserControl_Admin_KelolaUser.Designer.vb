@@ -49,6 +49,7 @@ Partial Class UserControl_Admin_KelolaUser
         Me.Label_Alamat = New System.Windows.Forms.Label()
         Me.TextBox_Alamat = New System.Windows.Forms.TextBox()
         Me.DataGridView_KelolaUser = New System.Windows.Forms.DataGridView()
+        Me.Label_Admin_Id_User = New System.Windows.Forms.Label()
         CType(Me.SplitContainer_Admin_KelolaUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer_Admin_KelolaUser.Panel1.SuspendLayout()
         Me.SplitContainer_Admin_KelolaUser.Panel2.SuspendLayout()
@@ -370,6 +371,16 @@ Partial Class UserControl_Admin_KelolaUser
         Me.DataGridView_KelolaUser.Size = New System.Drawing.Size(686, 177)
         Me.DataGridView_KelolaUser.TabIndex = 1
         '
+        'Label_Admin_Id_User
+        '
+        Me.Label_Admin_Id_User.AutoSize = True
+        Me.Label_Admin_Id_User.Location = New System.Drawing.Point(664, 258)
+        Me.Label_Admin_Id_User.Name = "Label_Admin_Id_User"
+        Me.Label_Admin_Id_User.Size = New System.Drawing.Size(39, 13)
+        Me.Label_Admin_Id_User.TabIndex = 2
+        Me.Label_Admin_Id_User.Text = "Label1"
+        Me.Label_Admin_Id_User.Visible = False
+        '
         'UserControl_Admin_KelolaUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,6 +388,7 @@ Partial Class UserControl_Admin_KelolaUser
         Me.Controls.Add(Me.DataGridView_KelolaUser)
         Me.Controls.Add(Me.SplitContainer_Admin_KelolaUser)
         Me.Controls.Add(Me.Label_KelolaUser)
+        Me.Controls.Add(Me.Label_Admin_Id_User)
         Me.Name = "UserControl_Admin_KelolaUser"
         Me.Size = New System.Drawing.Size(720, 441)
         Me.SplitContainer_Admin_KelolaUser.Panel1.ResumeLayout(False)
@@ -399,6 +411,7 @@ Partial Class UserControl_Admin_KelolaUser
         Me.Panel_Alamat.PerformLayout()
         CType(Me.DataGridView_KelolaUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -429,4 +442,5 @@ Partial Class UserControl_Admin_KelolaUser
     Friend WithEvents Panel_Username As Panel
     Friend WithEvents Panel_Alamat As Panel
     Friend WithEvents Panel_KelolaUser_Cari As Panel
+    Friend WithEvents Label_Admin_Id_User As Label
 End Class
