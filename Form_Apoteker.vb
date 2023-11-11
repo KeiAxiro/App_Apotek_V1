@@ -1,9 +1,9 @@
 ﻿Public Class Form_Apoteker
     Private Sub Button_Apoteker_Logout_Click(sender As Object, e As EventArgs) Handles Button_Apoteker_Logout.Click
-        Me.Hide()
         Form_Login.Show()
+        Me.Hide()
     End Sub
-    Private Sub Form_Apoteker_Dispose(sender As Object, e As EventArgs) Handles Me.Deactivate, Me.Disposed, Me.Closed
+    Private Sub Form_Apoteker_Dispose(sender As Object, e As EventArgs) Handles MyBase.Disposed, MyBase.Closed
         Form_Login.Show()
     End Sub
 

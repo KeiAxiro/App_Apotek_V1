@@ -1,4 +1,7 @@
-﻿Public Class UserControl_Admin_KelolaUser
+﻿Imports System.Data.SqlClient
+Imports System.Runtime.InteropServices
+
+Public Class UserControl_Admin_KelolaUser
 
     Private Sub UserControl_Admin_KelolaUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Kondisi_Awal()
@@ -14,6 +17,8 @@
         Button_KelolaUser_Hapus.Enabled = False
 
         Button_KelolaUser_Hapus.Text = "Hapus"
+        Button_KelolaUser_Edit.Text = "Edit"
+        Button_KelolaUser_Tambah.Text = "Tambah"
 
         DataGridView_KelolaUser.Enabled = True
     End Sub
@@ -97,10 +102,10 @@
                     Button_KelolaUser_Edit.Enabled = True
                     Button_KelolaUser_Hapus.Enabled = True
                 Else
-                    MsgBox("tambah")
+                    MsgBox("Ini Hanya Bisa Read Only!", vbOKOnly, "Warning")
                 End If
             Else
-                MsgBox("tambah")
+                MsgBox("Kesalahan Pada Id Atau Kolom Tidak Tersedia!", vbOKOnly, "Error")
             End If
         End If
     End Sub
@@ -109,11 +114,16 @@
         If Button_KelolaUser_Tambah.Text.ToLower = "tambah" Then
             Button_KelolaUser_Tambah.Text = "Simpan"
             Call Kondisi_Input(True)
-            DataGridView_KelolaUser.Enabled = False
             Call Clear_Input()
+
+            DataGridView_KelolaUser.Enabled = False
+            Button_KelolaUser_Edit.Enabled = False
+
+            Button_KelolaUser_Hapus.Enabled = True
+            Button_KelolaUser_Hapus.Text = "Cancel"
+
         ElseIf Button_KelolaUser_Tambah.Text.ToLower = "simpan" Then
             If ComboBox_TipeUser.Text <> "" AndAlso TextBox_Nama.Text <> "" AndAlso TextBox_Telepon.Text <> "" AndAlso TextBox_Alamat.Text <> "" AndAlso TextBox_Username.Text <> "" Then
-                Button_KelolaUser_Tambah.Text = "Tambah"
                 Call Tambah_User()
                 Call Kondisi_Awal()
             Else
@@ -142,7 +152,14 @@
 
             Button_KelolaUser_Edit.Text = "Simpan"
             Call Kondisi_Input(True)
+
+            Button_KelolaUser_Tambah.Enabled = False
+
+            Button_KelolaUser_Hapus.Enabled = True
+            Button_KelolaUser_Hapus.Text = "Cancel"
+
         ElseIf Button_KelolaUser_Edit.Text.ToLower = "simpan" Then
+
             Call Edit_User()
             Call Kondisi_Awal()
         End If
@@ -166,18 +183,34 @@
     End Sub
 
     Private Sub Button_KelolaUser_Hapus_Click(sender As Object, e As EventArgs) Handles Button_KelolaUser_Hapus.Click
-        If Label_Admin_Id_User.Text <> "" Then
-            Call Hapus_user()
+        If Button_KelolaUser_Hapus.Text.ToLower = "hapus" Then
+            If Label_Admin_Id_User.Text <> "" Then
+                Call Hapus_user()
+                Call Kondisi_Awal()
+            End If
+        ElseIf Button_KelolaUser_Hapus.Text.ToLower = "cancel" Then
             Call Kondisi_Awal()
         End If
     End Sub
     Private Sub Hapus_user()
         Call Koneksi()
         Dim DeleteUser As String = "DELETE FROM Tbl_User WHERE Id_User = @P_Id_User"
+        Dim DeleteLog As String = "DELETE FROM Tbl_Log WHERE Id_User = @P_Id_User"
         Cmd = New SqlClient.SqlCommand(DeleteUser, Conn)
         Cmd.Parameters.AddWithValue("@P_Id_User", Label_Admin_Id_User.Text.ToString)
-
         Cmd.ExecuteNonQuery()
+    End Sub
+
+    Private Sub TextBox_KelolaUser_Cari_TextChanged(sender As Object, e As EventArgs) Handles TextBox_KelolaUser_Cari.TextChanged
+        Call Koneksi()
+        Dim GetDataUserFromName As String = "SELECT * FROM Tbl_User WHERE Nama_User LIKE '%' + @P_CariNama + '%'"
+        Cmd = New SqlClient.SqlCommand(GetDataUserFromName, Conn)
+        Cmd.Parameters.AddWithValue("@P_CariNama", TextBox_KelolaUser_Cari.Text)
+        Sda = New SqlDataAdapter(Cmd)
+        Ds = New DataSet
+        Sda.Fill(Ds, "Tbl_User")
+
+        DataGridView_KelolaUser.DataSource = Ds.Tables("Tbl_User")
 
     End Sub
 End Class

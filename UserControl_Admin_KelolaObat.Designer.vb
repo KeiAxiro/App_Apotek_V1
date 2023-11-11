@@ -28,8 +28,8 @@ Partial Class UserControl_Admin_KelolaObat
         Me.DateTimePicker_ExpiredDate = New System.Windows.Forms.DateTimePicker()
         Me.Label_ExpiredDate = New System.Windows.Forms.Label()
         Me.Panel_Jumlah = New System.Windows.Forms.Panel()
-        Me.TextBox_Alamat = New System.Windows.Forms.TextBox()
-        Me.TextBox_Username = New System.Windows.Forms.TextBox()
+        Me.TextBox_Jumlah = New System.Windows.Forms.TextBox()
+        Me.TextBox_Harga = New System.Windows.Forms.TextBox()
         Me.Panel_NamaObat = New System.Windows.Forms.Panel()
         Me.Label_NamaObat = New System.Windows.Forms.Label()
         Me.TextBox_NamaObat = New System.Windows.Forms.TextBox()
@@ -119,34 +119,34 @@ Partial Class UserControl_Admin_KelolaObat
         'Panel_Jumlah
         '
         Me.Panel_Jumlah.Controls.Add(Me.Label_Jumlah)
-        Me.Panel_Jumlah.Controls.Add(Me.TextBox_Alamat)
+        Me.Panel_Jumlah.Controls.Add(Me.TextBox_Jumlah)
         Me.Panel_Jumlah.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Jumlah.Location = New System.Drawing.Point(0, 0)
         Me.Panel_Jumlah.Name = "Panel_Jumlah"
         Me.Panel_Jumlah.Size = New System.Drawing.Size(357, 60)
         Me.Panel_Jumlah.TabIndex = 3
         '
-        'TextBox_Alamat
+        'TextBox_Jumlah
         '
-        Me.TextBox_Alamat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.TextBox_Jumlah.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox_Alamat.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox_Alamat.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox_Alamat.Location = New System.Drawing.Point(18, 30)
-        Me.TextBox_Alamat.Name = "TextBox_Alamat"
-        Me.TextBox_Alamat.Size = New System.Drawing.Size(323, 20)
-        Me.TextBox_Alamat.TabIndex = 1
+        Me.TextBox_Jumlah.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Jumlah.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Jumlah.Location = New System.Drawing.Point(18, 30)
+        Me.TextBox_Jumlah.Name = "TextBox_Jumlah"
+        Me.TextBox_Jumlah.Size = New System.Drawing.Size(323, 20)
+        Me.TextBox_Jumlah.TabIndex = 1
         '
-        'TextBox_Username
+        'TextBox_Harga
         '
-        Me.TextBox_Username.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.TextBox_Harga.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox_Username.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox_Username.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox_Username.Location = New System.Drawing.Point(18, 30)
-        Me.TextBox_Username.Name = "TextBox_Username"
-        Me.TextBox_Username.Size = New System.Drawing.Size(323, 20)
-        Me.TextBox_Username.TabIndex = 1
+        Me.TextBox_Harga.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Harga.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Harga.Location = New System.Drawing.Point(18, 30)
+        Me.TextBox_Harga.Name = "TextBox_Harga"
+        Me.TextBox_Harga.Size = New System.Drawing.Size(323, 20)
+        Me.TextBox_Harga.TabIndex = 1
         '
         'Panel_NamaObat
         '
@@ -194,7 +194,7 @@ Partial Class UserControl_Admin_KelolaObat
         'Panel_HargaPerUnit
         '
         Me.Panel_HargaPerUnit.Controls.Add(Me.Label_HargaPerUnit)
-        Me.Panel_HargaPerUnit.Controls.Add(Me.TextBox_Username)
+        Me.Panel_HargaPerUnit.Controls.Add(Me.TextBox_Harga)
         Me.Panel_HargaPerUnit.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_HargaPerUnit.Location = New System.Drawing.Point(0, 60)
         Me.Panel_HargaPerUnit.Name = "Panel_HargaPerUnit"
@@ -376,8 +376,8 @@ Partial Class UserControl_Admin_KelolaObat
     Friend WithEvents Panel_Expired As Panel
     Friend WithEvents Label_ExpiredDate As Label
     Friend WithEvents Panel_Jumlah As Panel
-    Friend WithEvents TextBox_Alamat As TextBox
-    Friend WithEvents TextBox_Username As TextBox
+    Friend WithEvents TextBox_Jumlah As TextBox
+    Friend WithEvents TextBox_Harga As TextBox
     Friend WithEvents Panel_NamaObat As Panel
     Friend WithEvents Label_NamaObat As Label
     Friend WithEvents TextBox_NamaObat As TextBox

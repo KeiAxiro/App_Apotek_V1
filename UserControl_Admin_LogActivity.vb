@@ -1,4 +1,6 @@
-﻿Public Class UserControl_Admin_LogActivity
+﻿Imports System.Data.SqlClient
+
+Public Class UserControl_Admin_LogActivity
 
     Private Sub UserControl_Admin_LogActivity_Load(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Load, Me.ControlAdded
         Call Show_Grid_LogActivity()
@@ -9,8 +11,13 @@
 
     Private Sub Show_Grid_LogActivity()
         Call Koneksi()
-        Dim GetDataLog As String = "SELECT Id_Log,Tbl_User.Username,Waktu,Aktivitas FROM Tbl_Log INNER JOIN Tbl_User On Tbl_Log.Id_User = Tbl_User.Id_User ORDER BY Waktu"
-        Sda = New SqlClient.SqlDataAdapter(GetDataLog, Conn)
+
+        Dim DatePicker = Format(DateTimePicker_Admin_LogActivity.Value.Date, "yyyy-MM-dd 00:00:00").ToString
+
+        Dim GetDataLog As String = "SELECT Id_Log,Tbl_User.Username,Waktu,Aktivitas FROM Tbl_Log INNER JOIN Tbl_User On Tbl_Log.Id_User = Tbl_User.Id_User WHERE Waktu > @P_Waktu ORDER BY Waktu DESC"
+        Cmd = New SqlClient.SqlCommand(GetDataLog, Conn)
+        Sda = New SqlClient.SqlDataAdapter(Cmd)
+        Cmd.Parameters.AddWithValue("@P_Waktu", DatePicker)
         Ds = New DataSet
         Sda.Fill(Ds, "Tbl_Log")
 

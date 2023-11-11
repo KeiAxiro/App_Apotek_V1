@@ -8,17 +8,16 @@ Module Module_Db_Connection
     Public Ds As DataSet
     Sub Koneksi()
         'Pc Sekolah
-        'Dim MyDB As String = "Data Source=DESKTOP-IG5QTRU\SQLEXPRESS;User ID=keidjaru;Password=kei;initial catalog=Db_Apotek"
+        Dim MyDB As String = "Data Source=DESKTOP-IG5QTRU\SQLEXPRESS;User ID=keidjaru;Password=kei;initial catalog=Db_Apotek"
         'Laptop
-        Dim MyDB As String = "Data Source=DESKTOP-34EMTUJ;User ID=keidjaru;Password=kei;initial catalog=Db_Apotek"
+        'Dim MyDB As String = "Data Source=DESKTOP-34EMTUJ;User ID=keidjaru;Password=kei;initial catalog=Db_Apotek"
 
         Conn = New SqlConnection(MyDB)
         If Conn.State = ConnectionState.Closed Then
             Try
                 Conn.Open()
             Catch ex As Exception
-                MsgBox(ex)
-                Conn.Close()
+                MsgBox(ex.HResult.ToString)
             End Try
         End If
     End Sub
