@@ -47,6 +47,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.TextBox_KelolaObat_Cari = New System.Windows.Forms.TextBox()
         Me.SplitContainer_Admin_KelolaObat = New System.Windows.Forms.SplitContainer()
         Me.Label_KelolaObat = New System.Windows.Forms.Label()
+        Me.Label_Id_Obat = New System.Windows.Forms.Label()
         CType(Me.DataGridView_KelolaObat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_Expired.SuspendLayout()
         Me.Panel_Jumlah.SuspendLayout()
@@ -65,6 +66,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.DataGridView_KelolaObat.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView_KelolaObat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView_KelolaObat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_KelolaObat.Location = New System.Drawing.Point(18, 256)
         Me.DataGridView_KelolaObat.Name = "DataGridView_KelolaObat"
@@ -341,10 +343,20 @@ Partial Class UserControl_Admin_KelolaObat
         Me.Label_KelolaObat.Text = "Kelola Obat"
         Me.Label_KelolaObat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label_Id_Obat
+        '
+        Me.Label_Id_Obat.AutoSize = True
+        Me.Label_Id_Obat.Location = New System.Drawing.Point(21, 16)
+        Me.Label_Id_Obat.Name = "Label_Id_Obat"
+        Me.Label_Id_Obat.Size = New System.Drawing.Size(39, 13)
+        Me.Label_Id_Obat.TabIndex = 5
+        Me.Label_Id_Obat.Text = "Label1"
+        '
         'UserControl_Admin_KelolaObat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label_Id_Obat)
         Me.Controls.Add(Me.DataGridView_KelolaObat)
         Me.Controls.Add(Me.SplitContainer_Admin_KelolaObat)
         Me.Controls.Add(Me.Label_KelolaObat)
@@ -368,6 +380,7 @@ Partial Class UserControl_Admin_KelolaObat
         CType(Me.SplitContainer_Admin_KelolaObat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer_Admin_KelolaObat.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -396,4 +409,5 @@ Partial Class UserControl_Admin_KelolaObat
     Friend WithEvents Label_KelolaObat As Label
     Friend WithEvents TextBox_KodeObat As TextBox
     Friend WithEvents DateTimePicker_ExpiredDate As DateTimePicker
+    Friend WithEvents Label_Id_Obat As Label
 End Class

@@ -1,8 +1,9 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Runtime.CompilerServices
 
 Public Class UserControl_Admin_KelolaObat
     Private Sub UserControl_Admin_KelolaObat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call Show_Grid_Obat()
+        Call Kondisi_Awal()
     End Sub
     Private Sub SplitContainer_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer_Admin_KelolaObat.Paint
         Dim Pen As New Pen(Color.FromArgb(255, 0, 165, 0), 10)
@@ -26,6 +27,37 @@ Public Class UserControl_Admin_KelolaObat
         End Using
     End Sub
 
+    Private Sub Kondisi_Awal()
+        Call Show_Grid_Obat()
+        Call Kondisi_Input(False)
+        Call Clear_Input()
+
+        Button_KelolaObat_Tambah.Enabled = True
+        Button_KelolaObat_Edit.Enabled = False
+        Button_KelolaObat_Hapus.Enabled = False
+
+        Button_KelolaObat_Tambah.Text = "Tambah"
+        Button_KelolaObat_Edit.Text = "Edit"
+        Button_KelolaObat_Hapus.Text = "Hapus"
+    End Sub
+
+    Private Sub Kondisi_Input(Kondisi As Boolean)
+        TextBox_KodeObat.Enabled = Kondisi
+        TextBox_NamaObat.Enabled = Kondisi
+        DateTimePicker_ExpiredDate.Enabled = Kondisi
+        TextBox_Jumlah.Enabled = Kondisi
+        TextBox_Harga.Enabled = Kondisi
+    End Sub
+
+    Private Sub Clear_Input()
+        TextBox_KodeObat.Clear()
+        TextBox_NamaObat.Clear()
+        DateTimePicker_ExpiredDate.Value = DateTimePicker.MinimumDateTime
+        TextBox_Jumlah.Clear()
+        TextBox_Harga.Clear()
+        TextBox_KelolaObat_Cari.Clear()
+    End Sub
+
     Private Sub Show_Grid_Obat()
         Call Koneksi()
         Dim GetdataObat As String = "SELECT * FROM Tbl_Obat"
@@ -34,23 +66,71 @@ Public Class UserControl_Admin_KelolaObat
         Sda.Fill(Ds, "Tbl_Obat")
         DataGridView_KelolaObat.DataSource = Ds.Tables("Tbl_Obat")
     End Sub
+    Private Sub DataGridView_KelolaObat_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView_KelolaObat.CellClick
+        If e.RowIndex >= 0 Then
+            Dim SelectedRow As DataGridViewRow = DataGridView_KelolaObat.Rows(e.RowIndex)
+            Dim IdValue As String = SelectedRow.Cells(0).Value.ToString
+
+            Call Koneksi()
+            Dim GetDataObat As String = "SELECT * FROM Tbl_Obat WHERE Id_Obat = @P_Id_Obat"
+            Cmd = New SqlCommand(GetDataObat, Conn)
+            Cmd.Parameters.AddWithValue("@P_Id_Obat", IdValue)
+
+            If IdValue <> "" Then
+                Srd = Cmd.ExecuteReader
+                Srd.Read()
+
+                If Srd.HasRows Then
+                    Label_Id_Obat.Text = Srd.Item("Id_Obat")
+                    TextBox_KodeObat.Text = Srd.Item("Kode_Obat")
+                    TextBox_NamaObat.Text = Srd.Item("Nama_Obat")
+                    DateTimePicker_ExpiredDate.Value = Srd.Item("Expired_Date")
+                    TextBox_Jumlah.Text = Srd.Item("Jumlah")
+                    TextBox_Harga.Text = Srd.Item("Jumlah")
+
+                    Button_KelolaObat_Tambah.Enabled = True
+                    Button_KelolaObat_Edit.Enabled = True
+                    Button_KelolaObat_Hapus.Enabled = True
+                End If
+            Else
+                MsgBox("Data Tidak Tersedia!", vbOKOnly, "Error")
+                Call Kondisi_Awal()
+            End If
+        End If
+    End Sub
 
     Private Sub Button_KelolaObat_Tambah_Click(sender As Object, e As EventArgs) Handles Button_KelolaObat_Tambah.Click
+        If Button_KelolaObat_Tambah.Text.ToLower = "tambah" Then
+            Call Kondisi_Input(True)
+            Call Clear_Input()
 
+            TextBox_KodeObat.Focus()
+
+            Button_KelolaObat_Tambah.Text = "Simpan"
+            Button_KelolaObat_Hapus.Text = "Cancel"
+
+            Button_KelolaObat_Edit.Enabled = False
+            Button_KelolaObat_Hapus.Enabled = True
+
+        ElseIf Button_KelolaObat_Tambah.Text.ToLower = "simpan" Then
+
+            Call Tambah_Obat()
+            Call Kondisi_Awal()
+        End If
     End Sub
 
     Private Sub Tambah_Obat()
         Call Koneksi()
-        Dim InsertDataObat As String = "INSERT TO Tbl_Obat(Kode_Obat,Nama_Obat,Expired_Date,Jumlah,Harga) VALUES(@P_Kode_Obat,@P_Nama_Obat,@P_Expired_Date,@P_Jumlah,@P_Harga)"
+        Dim InsertDataObat As String = "INSERT INTO Tbl_Obat(Kode_Obat,Nama_Obat,Expired_Date,Jumlah,Harga) VALUES(@P_Kode_Obat,@P_Nama_Obat,@P_Expired_Date,@P_Jumlah,@P_Harga)"
         Cmd = New SqlClient.SqlCommand(InsertDataObat, Conn)
 
         Cmd.Parameters.AddWithValue("@P_Kode_Obat", TextBox_KodeObat.Text)
         Cmd.Parameters.AddWithValue("@P_Nama_Obat", TextBox_NamaObat.Text)
         Cmd.Parameters.AddWithValue("@P_Expired_Date", DateTimePicker_ExpiredDate.Value.Date)
         Cmd.Parameters.AddWithValue("@P_Jumlah", TextBox_Jumlah.Text)
-        Cmd.Parameters.AddWithValue("@P_Harga", TextBox_Harga.Text)
+        Cmd.Parameters.AddWithValue("@P_Harga", Int(TextBox_Harga.Text))
 
-
+        Cmd.ExecuteNonQuery()
 
     End Sub
 
@@ -59,25 +139,11 @@ Public Class UserControl_Admin_KelolaObat
     End Sub
 
     Private Sub Button_KelolaObat_Hapus_Click(sender As Object, e As EventArgs) Handles Button_KelolaObat_Hapus.Click
+        If Button_KelolaObat_Hapus.Text.ToLower = "hapus" Then
 
-    End Sub
-
-    Private Sub DataGridView_KelolaObat_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView_KelolaObat.CellClick
-        If e.RowIndex >= 0 Then
-            Dim SelectedRow As DataGridViewRow = DataGridView_KelolaObat.Rows(e.RowIndex)
-            Dim IdValue As Integer = SelectedRow.Cells(0).Value.ToString
-
-            Call Koneksi()
-            Dim GetDataObat As String = "SELECT * FROM Tbl_Obat WHERE Id_Obat = @P_Id_Obat"
-            Cmd = New SqlCommand(GetDataObat, Conn)
-            Cmd.Parameters.AddWithValue("@P_Id_Obat", IdValue)
-            Srd = Cmd.ExecuteReader
-
-            If Srd.HasRows Then
-                Srd.Read()
-                MsgBox(Srd.Item("Kode_Obat"))
-            End If
-
+        ElseIf Button_KelolaObat_Hapus.Text.ToLower = "cancel" Then
+            Kondisi_Awal()
         End If
     End Sub
+
 End Class

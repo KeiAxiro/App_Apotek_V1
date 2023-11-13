@@ -106,6 +106,7 @@ Public Class UserControl_Admin_KelolaUser
                 End If
             Else
                 MsgBox("Kesalahan Pada Id Atau Kolom Tidak Tersedia!", vbOKOnly, "Error")
+                Call Kondisi_Awal()
             End If
         End If
     End Sub
