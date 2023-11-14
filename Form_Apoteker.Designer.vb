@@ -82,7 +82,7 @@ Partial Class Form_Apoteker
         Me.Panel_Apoteker_Kanan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_Apoteker_Kanan.Location = New System.Drawing.Point(0, 0)
         Me.Panel_Apoteker_Kanan.Name = "Panel_Apoteker_Kanan"
-        Me.Panel_Apoteker_Kanan.Size = New System.Drawing.Size(563, 411)
+        Me.Panel_Apoteker_Kanan.Size = New System.Drawing.Size(707, 411)
         Me.Panel_Apoteker_Kanan.TabIndex = 0
         '
         'SplitContainer_Admin_KelolaObat
@@ -107,8 +107,8 @@ Partial Class Form_Apoteker
         Me.SplitContainer_Admin_KelolaObat.Panel2.Controls.Add(Me.Panel_Kosong)
         Me.SplitContainer_Admin_KelolaObat.Panel2.Controls.Add(Me.Panel_HargaPerUnit)
         Me.SplitContainer_Admin_KelolaObat.Panel2.Controls.Add(Me.Panel_Jumlah)
-        Me.SplitContainer_Admin_KelolaObat.Size = New System.Drawing.Size(563, 217)
-        Me.SplitContainer_Admin_KelolaObat.SplitterDistance = 278
+        Me.SplitContainer_Admin_KelolaObat.Size = New System.Drawing.Size(707, 217)
+        Me.SplitContainer_Admin_KelolaObat.SplitterDistance = 349
         Me.SplitContainer_Admin_KelolaObat.SplitterWidth = 7
         Me.SplitContainer_Admin_KelolaObat.TabIndex = 5
         '
@@ -119,7 +119,7 @@ Partial Class Form_Apoteker
         Me.Panel_Expired.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Expired.Location = New System.Drawing.Point(0, 120)
         Me.Panel_Expired.Name = "Panel_Expired"
-        Me.Panel_Expired.Size = New System.Drawing.Size(278, 60)
+        Me.Panel_Expired.Size = New System.Drawing.Size(349, 60)
         Me.Panel_Expired.TabIndex = 2
         '
         'DateTimePicker_ExpiredDate
@@ -131,9 +131,9 @@ Partial Class Form_Apoteker
         Me.DateTimePicker_ExpiredDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker_ExpiredDate.Location = New System.Drawing.Point(18, 30)
         Me.DateTimePicker_ExpiredDate.Name = "DateTimePicker_ExpiredDate"
-        Me.DateTimePicker_ExpiredDate.Size = New System.Drawing.Size(244, 26)
+        Me.DateTimePicker_ExpiredDate.Size = New System.Drawing.Size(315, 26)
         Me.DateTimePicker_ExpiredDate.TabIndex = 3
-        Me.DateTimePicker_ExpiredDate.Value = New Date(2023, 11, 7, 7, 48, 35, 0)
+        Me.DateTimePicker_ExpiredDate.Value = New Date(2023, 11, 14, 0, 0, 0, 0)
         '
         'Label_ExpiredDate
         '
@@ -152,7 +152,7 @@ Partial Class Form_Apoteker
         Me.Panel_NamaObat.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_NamaObat.Location = New System.Drawing.Point(0, 60)
         Me.Panel_NamaObat.Name = "Panel_NamaObat"
-        Me.Panel_NamaObat.Size = New System.Drawing.Size(278, 60)
+        Me.Panel_NamaObat.Size = New System.Drawing.Size(349, 60)
         Me.Panel_NamaObat.TabIndex = 1
         '
         'Label_NamaObat
@@ -173,7 +173,7 @@ Partial Class Form_Apoteker
         Me.TextBox_NamaObat.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_NamaObat.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_NamaObat.Name = "TextBox_NamaObat"
-        Me.TextBox_NamaObat.Size = New System.Drawing.Size(244, 20)
+        Me.TextBox_NamaObat.Size = New System.Drawing.Size(315, 20)
         Me.TextBox_NamaObat.TabIndex = 1
         '
         'Panel_KodeObat
@@ -183,7 +183,7 @@ Partial Class Form_Apoteker
         Me.Panel_KodeObat.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_KodeObat.Location = New System.Drawing.Point(0, 0)
         Me.Panel_KodeObat.Name = "Panel_KodeObat"
-        Me.Panel_KodeObat.Size = New System.Drawing.Size(278, 60)
+        Me.Panel_KodeObat.Size = New System.Drawing.Size(349, 60)
         Me.Panel_KodeObat.TabIndex = 0
         '
         'Label_KodeObat
@@ -204,7 +204,7 @@ Partial Class Form_Apoteker
         Me.TextBox_KodeObat.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_KodeObat.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_KodeObat.Name = "TextBox_KodeObat"
-        Me.TextBox_KodeObat.Size = New System.Drawing.Size(244, 20)
+        Me.TextBox_KodeObat.Size = New System.Drawing.Size(315, 20)
         Me.TextBox_KodeObat.TabIndex = 1
         '
         'Button_KelolaObat_Hapus
@@ -244,7 +244,7 @@ Partial Class Form_Apoteker
         Me.Panel_KelolaObat_Cari.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_KelolaObat_Cari.Location = New System.Drawing.Point(0, 180)
         Me.Panel_KelolaObat_Cari.Name = "Panel_KelolaObat_Cari"
-        Me.Panel_KelolaObat_Cari.Size = New System.Drawing.Size(278, 37)
+        Me.Panel_KelolaObat_Cari.Size = New System.Drawing.Size(351, 37)
         Me.Panel_KelolaObat_Cari.TabIndex = 6
         '
         'TextBox_KelolaObat_Cari
@@ -255,7 +255,7 @@ Partial Class Form_Apoteker
         Me.TextBox_KelolaObat_Cari.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_KelolaObat_Cari.Location = New System.Drawing.Point(57, 5)
         Me.TextBox_KelolaObat_Cari.Name = "TextBox_KelolaObat_Cari"
-        Me.TextBox_KelolaObat_Cari.Size = New System.Drawing.Size(205, 27)
+        Me.TextBox_KelolaObat_Cari.Size = New System.Drawing.Size(278, 27)
         Me.TextBox_KelolaObat_Cari.TabIndex = 1
         '
         'Label_KelolaObat_Cari
@@ -275,7 +275,7 @@ Partial Class Form_Apoteker
         Me.Panel_Kosong.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Kosong.Location = New System.Drawing.Point(0, 120)
         Me.Panel_Kosong.Name = "Panel_Kosong"
-        Me.Panel_Kosong.Size = New System.Drawing.Size(278, 60)
+        Me.Panel_Kosong.Size = New System.Drawing.Size(351, 60)
         Me.Panel_Kosong.TabIndex = 5
         '
         'Panel_HargaPerUnit
@@ -285,7 +285,7 @@ Partial Class Form_Apoteker
         Me.Panel_HargaPerUnit.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_HargaPerUnit.Location = New System.Drawing.Point(0, 60)
         Me.Panel_HargaPerUnit.Name = "Panel_HargaPerUnit"
-        Me.Panel_HargaPerUnit.Size = New System.Drawing.Size(278, 60)
+        Me.Panel_HargaPerUnit.Size = New System.Drawing.Size(351, 60)
         Me.Panel_HargaPerUnit.TabIndex = 4
         '
         'Label_HargaPerUnit
@@ -308,7 +308,7 @@ Partial Class Form_Apoteker
         Me.TextBox_Username.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_Username.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_Username.Name = "TextBox_Username"
-        Me.TextBox_Username.Size = New System.Drawing.Size(244, 20)
+        Me.TextBox_Username.Size = New System.Drawing.Size(317, 20)
         Me.TextBox_Username.TabIndex = 1
         '
         'Panel_Jumlah
@@ -318,7 +318,7 @@ Partial Class Form_Apoteker
         Me.Panel_Jumlah.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Jumlah.Location = New System.Drawing.Point(0, 0)
         Me.Panel_Jumlah.Name = "Panel_Jumlah"
-        Me.Panel_Jumlah.Size = New System.Drawing.Size(278, 60)
+        Me.Panel_Jumlah.Size = New System.Drawing.Size(351, 60)
         Me.Panel_Jumlah.TabIndex = 3
         '
         'Label_Jumlah
@@ -341,7 +341,7 @@ Partial Class Form_Apoteker
         Me.TextBox_Alamat.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_Alamat.Location = New System.Drawing.Point(18, 30)
         Me.TextBox_Alamat.Name = "TextBox_Alamat"
-        Me.TextBox_Alamat.Size = New System.Drawing.Size(244, 20)
+        Me.TextBox_Alamat.Size = New System.Drawing.Size(317, 20)
         Me.TextBox_Alamat.TabIndex = 1
         '
         'Label_KelolaObat
@@ -351,7 +351,7 @@ Partial Class Form_Apoteker
                 Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_KelolaObat.Location = New System.Drawing.Point(0, 0)
         Me.Label_KelolaObat.Name = "Label_KelolaObat"
-        Me.Label_KelolaObat.Size = New System.Drawing.Size(563, 35)
+        Me.Label_KelolaObat.Size = New System.Drawing.Size(707, 35)
         Me.Label_KelolaObat.TabIndex = 6
         Me.Label_KelolaObat.Text = "Kelola Resep"
         '
@@ -363,7 +363,7 @@ Partial Class Form_Apoteker
         Me.DataGridView_KelolaObat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView_KelolaObat.Location = New System.Drawing.Point(18, 256)
         Me.DataGridView_KelolaObat.Name = "DataGridView_KelolaObat"
-        Me.DataGridView_KelolaObat.Size = New System.Drawing.Size(533, 149)
+        Me.DataGridView_KelolaObat.Size = New System.Drawing.Size(677, 149)
         Me.DataGridView_KelolaObat.TabIndex = 7
         '
         'SplitContainer_Login
@@ -382,8 +382,8 @@ Partial Class Form_Apoteker
         'SplitContainer_Login.Panel2
         '
         Me.SplitContainer_Login.Panel2.Controls.Add(Me.Panel_Apoteker_Kanan)
-        Me.SplitContainer_Login.Size = New System.Drawing.Size(784, 411)
-        Me.SplitContainer_Login.SplitterDistance = 220
+        Me.SplitContainer_Login.Size = New System.Drawing.Size(984, 411)
+        Me.SplitContainer_Login.SplitterDistance = 276
         Me.SplitContainer_Login.SplitterWidth = 1
         Me.SplitContainer_Login.TabIndex = 2
         '
@@ -397,7 +397,7 @@ Partial Class Form_Apoteker
         Me.Panel_Apoteker_Kiri.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_Apoteker_Kiri.Location = New System.Drawing.Point(0, 0)
         Me.Panel_Apoteker_Kiri.Name = "Panel_Apoteker_Kiri"
-        Me.Panel_Apoteker_Kiri.Size = New System.Drawing.Size(220, 411)
+        Me.Panel_Apoteker_Kiri.Size = New System.Drawing.Size(276, 411)
         Me.Panel_Apoteker_Kiri.TabIndex = 0
         '
         'Label_Apoteker_KelolaResep
@@ -419,7 +419,7 @@ Partial Class Form_Apoteker
         Me.Label_Apoteker.ForeColor = System.Drawing.SystemColors.Control
         Me.Label_Apoteker.Location = New System.Drawing.Point(0, 0)
         Me.Label_Apoteker.Name = "Label_Apoteker"
-        Me.Label_Apoteker.Size = New System.Drawing.Size(220, 94)
+        Me.Label_Apoteker.Size = New System.Drawing.Size(276, 94)
         Me.Label_Apoteker.TabIndex = 2
         Me.Label_Apoteker.Text = "APOTEKER"
         Me.Label_Apoteker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -433,7 +433,7 @@ Partial Class Form_Apoteker
         Me.Button_Apoteker_Logout.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Apoteker_Logout.Location = New System.Drawing.Point(50, 341)
         Me.Button_Apoteker_Logout.Name = "Button_Apoteker_Logout"
-        Me.Button_Apoteker_Logout.Size = New System.Drawing.Size(125, 28)
+        Me.Button_Apoteker_Logout.Size = New System.Drawing.Size(181, 28)
         Me.Button_Apoteker_Logout.TabIndex = 1
         Me.Button_Apoteker_Logout.Text = "Logout"
         Me.Button_Apoteker_Logout.UseVisualStyleBackColor = False
@@ -443,7 +443,7 @@ Partial Class Form_Apoteker
         Me.PictureBox_Apoteker_Logo.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox_Apoteker_Logo.Image = Global.App_Apotek_V1.My.Resources.Resources.Ryo_Yamada
         Me.PictureBox_Apoteker_Logo.InitialImage = Nothing
-        Me.PictureBox_Apoteker_Logo.Location = New System.Drawing.Point(35, 97)
+        Me.PictureBox_Apoteker_Logo.Location = New System.Drawing.Point(63, 97)
         Me.PictureBox_Apoteker_Logo.Name = "PictureBox_Apoteker_Logo"
         Me.PictureBox_Apoteker_Logo.Size = New System.Drawing.Size(150, 150)
         Me.PictureBox_Apoteker_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -454,7 +454,7 @@ Partial Class Form_Apoteker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 411)
+        Me.ClientSize = New System.Drawing.Size(984, 411)
         Me.Controls.Add(Me.SplitContainer_Login)
         Me.Name = "Form_Apoteker"
         Me.Text = "From Kelola Resep | Apoteker"

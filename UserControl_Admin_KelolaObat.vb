@@ -32,6 +32,8 @@ Public Class UserControl_Admin_KelolaObat
         Call Kondisi_Input(False)
         Call Clear_Input()
 
+        DateTimePicker_ExpiredDate.Value = Date.Now
+
         Button_KelolaObat_Tambah.Enabled = True
         Button_KelolaObat_Edit.Enabled = False
         Button_KelolaObat_Hapus.Enabled = False
@@ -39,6 +41,16 @@ Public Class UserControl_Admin_KelolaObat
         Button_KelolaObat_Tambah.Text = "Tambah"
         Button_KelolaObat_Edit.Text = "Edit"
         Button_KelolaObat_Hapus.Text = "Hapus"
+
+        DataGridView_KelolaObat.Enabled = True
+    End Sub
+
+    Private Sub Textbox_Number(sender As Object, e As KeyPressEventArgs) Handles TextBox_Harga.KeyPress, TextBox_Jumlah.KeyPress
+        ' yang integer bjir ini mah kek jumlah dan harga
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            MsgBox("Masukan Angka!", vbOKOnly, "Warning")
+            e.Handled = True
+        End If
     End Sub
 
     Private Sub Kondisi_Input(Kondisi As Boolean)
@@ -112,6 +124,8 @@ Public Class UserControl_Admin_KelolaObat
             Button_KelolaObat_Edit.Enabled = False
             Button_KelolaObat_Hapus.Enabled = True
 
+            DataGridView_KelolaObat.Enabled = False
+
         ElseIf Button_KelolaObat_Tambah.Text.ToLower = "simpan" Then
 
             Call Tambah_Obat()
@@ -127,7 +141,7 @@ Public Class UserControl_Admin_KelolaObat
         Cmd.Parameters.AddWithValue("@P_Kode_Obat", TextBox_KodeObat.Text)
         Cmd.Parameters.AddWithValue("@P_Nama_Obat", TextBox_NamaObat.Text)
         Cmd.Parameters.AddWithValue("@P_Expired_Date", DateTimePicker_ExpiredDate.Value.Date)
-        Cmd.Parameters.AddWithValue("@P_Jumlah", TextBox_Jumlah.Text)
+        Cmd.Parameters.AddWithValue("@P_Jumlah", Int(TextBox_Jumlah.Text))
         Cmd.Parameters.AddWithValue("@P_Harga", Int(TextBox_Harga.Text))
 
         Cmd.ExecuteNonQuery()
@@ -135,15 +149,68 @@ Public Class UserControl_Admin_KelolaObat
     End Sub
 
     Private Sub Button_KelolaObat_Edit_Click(sender As Object, e As EventArgs) Handles Button_KelolaObat_Edit.Click
+        If Button_KelolaObat_Edit.Text.ToLower = "edit" Then
+
+            Call Kondisi_Input(True)
+
+            Button_KelolaObat_Edit.Text = "Simpan"
+            Button_KelolaObat_Hapus.Text = "Cancel"
+
+            Button_KelolaObat_Tambah.Enabled = False
+            Button_KelolaObat_Hapus.Enabled = True
+
+        ElseIf Button_KelolaObat_Edit.Text.ToLower = "simpan" Then
+            Call Edit_Obat()
+            Call Kondisi_Awal()
+        End If
+    End Sub
+
+    Private Sub Edit_Obat()
+        Call Koneksi()
+        Dim UpdateDataObat As String = "UPDATE Tbl_Obat Set Kode_Obat = @P_Kode_obat,Nama_Obat = @P_Nama_Obat,Expired_Date = @P_Expired_Date,Jumlah = @P_Jumlah,Harga = @P_Harga WHERE Id_Obat = @P_Id_Obat"
+        Cmd = New SqlCommand(UpdateDataObat, Conn)
+
+        Cmd.Parameters.AddWithValue("@P_Id_Obat", Label_Id_Obat.Text)
+        Cmd.Parameters.AddWithValue("@P_Kode_Obat", TextBox_KodeObat.Text)
+        Cmd.Parameters.AddWithValue("@P_Nama_Obat", TextBox_NamaObat.Text)
+        Cmd.Parameters.AddWithValue("@P_Expired_Date", DateTimePicker_ExpiredDate.Value.Date)
+        Cmd.Parameters.AddWithValue("@P_Jumlah", Int(TextBox_Jumlah.Text))
+        Cmd.Parameters.AddWithValue("@P_Harga", Int(TextBox_Harga.Text))
+
+        Cmd.ExecuteNonQuery()
 
     End Sub
 
     Private Sub Button_KelolaObat_Hapus_Click(sender As Object, e As EventArgs) Handles Button_KelolaObat_Hapus.Click
         If Button_KelolaObat_Hapus.Text.ToLower = "hapus" Then
-
+            Call Hapus_Obat()
+            Call Kondisi_Awal()
         ElseIf Button_KelolaObat_Hapus.Text.ToLower = "cancel" Then
-            Kondisi_Awal()
+            Call Kondisi_Awal()
         End If
     End Sub
 
+    Private Sub Hapus_Obat()
+        Call Koneksi()
+        Dim DeleteDataObat As String = "DELETE FROM Tbl_Obat WHERE Id_Obat = @P_Id_Obat"
+        Cmd = New SqlCommand(DeleteDataObat, Conn)
+        Cmd.Parameters.AddWithValue("@P_Id_Obat", Label_Id_Obat.Text)
+
+        Cmd.ExecuteNonQuery()
+
+    End Sub
+
+    Private Sub TextBox_KelolaObat_Cari_TextChanged(sender As Object, e As EventArgs) Handles TextBox_KelolaObat_Cari.TextChanged
+        Call Koneksi()
+        Dim GetDataObatFromName As String = "SELECT * FROM Tbl_Obat WHERE Nama_Obat LIKE '%' + @P_Nama_Obat +'%'"
+        Cmd = New SqlCommand(GetDataObatFromName, Conn)
+        Cmd.Parameters.AddWithValue("@P_Nama_Obat", TextBox_KelolaObat_Cari.Text)
+
+        Sda = New SqlDataAdapter(Cmd)
+        Ds = New DataSet
+
+        Sda.Fill(Ds, "Tbl_Obat")
+        DataGridView_KelolaObat.DataSource = Ds.Tables("Tbl_Obat")
+
+    End Sub
 End Class

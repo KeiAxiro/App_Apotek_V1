@@ -106,7 +106,7 @@ Partial Class UserControl_Admin_KelolaObat
         Me.DateTimePicker_ExpiredDate.Name = "DateTimePicker_ExpiredDate"
         Me.DateTimePicker_ExpiredDate.Size = New System.Drawing.Size(323, 26)
         Me.DateTimePicker_ExpiredDate.TabIndex = 3
-        Me.DateTimePicker_ExpiredDate.Value = New Date(2023, 11, 7, 7, 48, 35, 0)
+        Me.DateTimePicker_ExpiredDate.Value = New Date(2023, 1, 11, 0, 0, 0, 0)
         '
         'Label_ExpiredDate
         '

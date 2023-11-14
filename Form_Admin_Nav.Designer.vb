@@ -28,8 +28,8 @@ Partial Class Form_Admin_Nav
         Me.Button_Admin_KelolaLaporan = New System.Windows.Forms.Button()
         Me.Button_Admin_KelolaUser = New System.Windows.Forms.Button()
         Me.Button_Admin_KelolaObat = New System.Windows.Forms.Button()
-        Me.Panel_Admin_Kanan = New System.Windows.Forms.Panel()
         Me.PictureBox_Admin_Logo = New System.Windows.Forms.PictureBox()
+        Me.Panel_Admin_Kanan = New System.Windows.Forms.Panel()
         CType(Me.SplitContainer_Login, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer_Login.Panel1.SuspendLayout()
         Me.SplitContainer_Login.Panel2.SuspendLayout()
@@ -54,8 +54,8 @@ Partial Class Form_Admin_Nav
         'SplitContainer_Login.Panel2
         '
         Me.SplitContainer_Login.Panel2.Controls.Add(Me.Panel_Admin_Kanan)
-        Me.SplitContainer_Login.Size = New System.Drawing.Size(784, 411)
-        Me.SplitContainer_Login.SplitterDistance = 220
+        Me.SplitContainer_Login.Size = New System.Drawing.Size(984, 411)
+        Me.SplitContainer_Login.SplitterDistance = 276
         Me.SplitContainer_Login.SplitterWidth = 1
         Me.SplitContainer_Login.TabIndex = 1
         '
@@ -70,7 +70,7 @@ Partial Class Form_Admin_Nav
         Me.Panel_Admin_Kiri.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_Admin_Kiri.Location = New System.Drawing.Point(0, 0)
         Me.Panel_Admin_Kiri.Name = "Panel_Admin_Kiri"
-        Me.Panel_Admin_Kiri.Size = New System.Drawing.Size(220, 411)
+        Me.Panel_Admin_Kiri.Size = New System.Drawing.Size(276, 411)
         Me.Panel_Admin_Kiri.TabIndex = 0
         '
         'Button_Admin_Logout
@@ -82,7 +82,7 @@ Partial Class Form_Admin_Nav
         Me.Button_Admin_Logout.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Admin_Logout.Location = New System.Drawing.Point(5, 360)
         Me.Button_Admin_Logout.Name = "Button_Admin_Logout"
-        Me.Button_Admin_Logout.Size = New System.Drawing.Size(210, 45)
+        Me.Button_Admin_Logout.Size = New System.Drawing.Size(266, 45)
         Me.Button_Admin_Logout.TabIndex = 1
         Me.Button_Admin_Logout.Text = "Logout"
         Me.Button_Admin_Logout.UseVisualStyleBackColor = False
@@ -96,7 +96,7 @@ Partial Class Form_Admin_Nav
         Me.Button_Admin_KelolaLaporan.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Admin_KelolaLaporan.Location = New System.Drawing.Point(5, 309)
         Me.Button_Admin_KelolaLaporan.Name = "Button_Admin_KelolaLaporan"
-        Me.Button_Admin_KelolaLaporan.Size = New System.Drawing.Size(210, 45)
+        Me.Button_Admin_KelolaLaporan.Size = New System.Drawing.Size(266, 45)
         Me.Button_Admin_KelolaLaporan.TabIndex = 1
         Me.Button_Admin_KelolaLaporan.Text = "Kelola Laporan"
         Me.Button_Admin_KelolaLaporan.UseVisualStyleBackColor = False
@@ -110,7 +110,7 @@ Partial Class Form_Admin_Nav
         Me.Button_Admin_KelolaUser.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Admin_KelolaUser.Location = New System.Drawing.Point(5, 207)
         Me.Button_Admin_KelolaUser.Name = "Button_Admin_KelolaUser"
-        Me.Button_Admin_KelolaUser.Size = New System.Drawing.Size(210, 45)
+        Me.Button_Admin_KelolaUser.Size = New System.Drawing.Size(266, 45)
         Me.Button_Admin_KelolaUser.TabIndex = 1
         Me.Button_Admin_KelolaUser.Text = "Kelola User"
         Me.Button_Admin_KelolaUser.UseVisualStyleBackColor = False
@@ -124,36 +124,36 @@ Partial Class Form_Admin_Nav
         Me.Button_Admin_KelolaObat.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Admin_KelolaObat.Location = New System.Drawing.Point(5, 258)
         Me.Button_Admin_KelolaObat.Name = "Button_Admin_KelolaObat"
-        Me.Button_Admin_KelolaObat.Size = New System.Drawing.Size(210, 45)
+        Me.Button_Admin_KelolaObat.Size = New System.Drawing.Size(266, 45)
         Me.Button_Admin_KelolaObat.TabIndex = 1
         Me.Button_Admin_KelolaObat.Text = "Kelola Obat"
         Me.Button_Admin_KelolaObat.UseVisualStyleBackColor = False
-        '
-        'Panel_Admin_Kanan
-        '
-        Me.Panel_Admin_Kanan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_Admin_Kanan.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_Admin_Kanan.Name = "Panel_Admin_Kanan"
-        Me.Panel_Admin_Kanan.Size = New System.Drawing.Size(563, 411)
-        Me.Panel_Admin_Kanan.TabIndex = 0
         '
         'PictureBox_Admin_Logo
         '
         Me.PictureBox_Admin_Logo.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox_Admin_Logo.Image = Global.App_Apotek_V1.My.Resources.Resources.Ryo_Yamada
         Me.PictureBox_Admin_Logo.InitialImage = Nothing
-        Me.PictureBox_Admin_Logo.Location = New System.Drawing.Point(35, 40)
+        Me.PictureBox_Admin_Logo.Location = New System.Drawing.Point(63, 40)
         Me.PictureBox_Admin_Logo.Name = "PictureBox_Admin_Logo"
         Me.PictureBox_Admin_Logo.Size = New System.Drawing.Size(150, 150)
         Me.PictureBox_Admin_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox_Admin_Logo.TabIndex = 0
         Me.PictureBox_Admin_Logo.TabStop = False
         '
+        'Panel_Admin_Kanan
+        '
+        Me.Panel_Admin_Kanan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_Admin_Kanan.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_Admin_Kanan.Name = "Panel_Admin_Kanan"
+        Me.Panel_Admin_Kanan.Size = New System.Drawing.Size(707, 411)
+        Me.Panel_Admin_Kanan.TabIndex = 0
+        '
         'Form_Admin_Nav
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 411)
+        Me.ClientSize = New System.Drawing.Size(984, 411)
         Me.Controls.Add(Me.SplitContainer_Login)
         Me.Name = "Form_Admin_Nav"
         Me.Text = "Form Navigasi Admin"
