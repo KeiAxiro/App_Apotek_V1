@@ -169,7 +169,7 @@ Partial Class Form_Login
         Me.TextBox_Login_Password.Name = "TextBox_Login_Password"
         Me.TextBox_Login_Password.Size = New System.Drawing.Size(360, 23)
         Me.TextBox_Login_Password.TabIndex = 1
-        Me.TextBox_Login_Password.Text = "kei"
+        Me.TextBox_Login_Password.Text = "yanti"
         Me.TextBox_Login_Password.UseSystemPasswordChar = True
         '
         'Label_Login_Password
@@ -201,7 +201,7 @@ Partial Class Form_Login
         Me.TextBox_Login_Username.Name = "TextBox_Login_Username"
         Me.TextBox_Login_Username.Size = New System.Drawing.Size(360, 23)
         Me.TextBox_Login_Username.TabIndex = 0
-        Me.TextBox_Login_Username.Text = "kei"
+        Me.TextBox_Login_Username.Text = "yanti"
         '
         'Label_Login_Username
         '

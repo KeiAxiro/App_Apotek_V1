@@ -32,8 +32,6 @@ Public Class UserControl_Admin_KelolaObat
         Call Kondisi_Input(False)
         Call Clear_Input()
 
-        DateTimePicker_ExpiredDate.Value = Date.Now
-
         Button_KelolaObat_Tambah.Enabled = True
         Button_KelolaObat_Edit.Enabled = False
         Button_KelolaObat_Hapus.Enabled = False
@@ -64,7 +62,7 @@ Public Class UserControl_Admin_KelolaObat
     Private Sub Clear_Input()
         TextBox_KodeObat.Clear()
         TextBox_NamaObat.Clear()
-        DateTimePicker_ExpiredDate.Value = DateTimePicker.MinimumDateTime
+        DateTimePicker_ExpiredDate.Value = Date.Now
         TextBox_Jumlah.Clear()
         TextBox_Harga.Clear()
         TextBox_KelolaObat_Cari.Clear()

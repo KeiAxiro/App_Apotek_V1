@@ -26,7 +26,7 @@
                 Form_Admin_Nav.Show()
                 Form_Admin_Nav.ChangePanel(New UserControl_Admin_LogActivity)
             ElseIf Get_TipeUser.ToLower = "kasir" Then
-
+                Form_Kasir.Show()
             ElseIf Get_TipeUser.ToLower = "apoteker" Then
                 Form_Apoteker.Show()
 
