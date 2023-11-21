@@ -22,6 +22,7 @@ Partial Class Form_Kasir
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label_Kasir_KelolaTransaksi = New System.Windows.Forms.Label()
         Me.Button_Kasir_Logout = New System.Windows.Forms.Button()
         Me.Panel_Admin_Kiri = New System.Windows.Forms.Panel()
@@ -30,45 +31,48 @@ Partial Class Form_Kasir
         Me.SplitContainer_Login = New System.Windows.Forms.SplitContainer()
         Me.Panel_Admin_Kanan = New System.Windows.Forms.Panel()
         Me.Panel_Apoteker_Kanan = New System.Windows.Forms.Panel()
+        Me.Panel_Bayar = New System.Windows.Forms.Panel()
+        Me.TextBox_Bayar = New System.Windows.Forms.TextBox()
+        Me.Button_Bayar = New System.Windows.Forms.Button()
+        Me.Label_HargaTotal = New System.Windows.Forms.Label()
+        Me.Label_Kembalian = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button_Save = New System.Windows.Forms.Button()
+        Me.Button_Print = New System.Windows.Forms.Button()
+        Me.DateTimePicker_Tanggal_Kasir = New System.Windows.Forms.DateTimePicker()
+        Me.Label_Nama_Kasir = New System.Windows.Forms.Label()
+        Me.Label_Waktu_Kasir = New System.Windows.Forms.Label()
         Me.Label_IdObat = New System.Windows.Forms.Label()
         Me.SplitContainer_KelolaResep = New System.Windows.Forms.SplitContainer()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button_Tambahkan = New System.Windows.Forms.Button()
         Me.Panel_NamaPasien = New System.Windows.Forms.Panel()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox_NamaPasien = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel_TglResep = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel_TanggalResep = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DateTimePicker_Tgl_Resep = New System.Windows.Forms.DateTimePicker()
         Me.Panel_NoResep = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox_NoResep = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel_TypeResep = New System.Windows.Forms.Panel()
+        Me.ComboBox_TypeResep = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel_KelolaResep_Cari = New System.Windows.Forms.Panel()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button_Kosongkan = New System.Windows.Forms.Button()
         Me.Panel_Quantity = New System.Windows.Forms.Panel()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox_Quantity = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel_Harga = New System.Windows.Forms.Panel()
+        Me.TextBox_Harga = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel_NamaObat = New System.Windows.Forms.Panel()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox_NamaObat = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel_NamaDokter = New System.Windows.Forms.Panel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox_NamaDokter = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label_KelolaObat = New System.Windows.Forms.Label()
         Me.DataGridView_KelolaResep = New System.Windows.Forms.DataGridView()
-        Me.Label_Waktu = New System.Windows.Forms.Label()
-        Me.Label_Nama_Kasir = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Admin_Kiri.SuspendLayout()
         CType(Me.PictureBox_Kasir_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer_Login, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,16 +81,17 @@ Partial Class Form_Kasir
         Me.SplitContainer_Login.SuspendLayout()
         Me.Panel_Admin_Kanan.SuspendLayout()
         Me.Panel_Apoteker_Kanan.SuspendLayout()
+        Me.Panel_Bayar.SuspendLayout()
         CType(Me.SplitContainer_KelolaResep, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer_KelolaResep.Panel1.SuspendLayout()
         Me.SplitContainer_KelolaResep.Panel2.SuspendLayout()
         Me.SplitContainer_KelolaResep.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.Panel_NamaPasien.SuspendLayout()
-        Me.Panel_TanggalResep.SuspendLayout()
+        Me.Panel_TglResep.SuspendLayout()
         Me.Panel_NoResep.SuspendLayout()
-        Me.Panel_KelolaResep_Cari.SuspendLayout()
+        Me.Panel_TypeResep.SuspendLayout()
         Me.Panel_Quantity.SuspendLayout()
+        Me.Panel_Harga.SuspendLayout()
         Me.Panel_NamaObat.SuspendLayout()
         Me.Panel_NamaDokter.SuspendLayout()
         CType(Me.DataGridView_KelolaResep, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -189,15 +194,12 @@ Partial Class Form_Kasir
         '
         'Panel_Apoteker_Kanan
         '
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Button5)
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Button4)
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Button1)
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.DateTimePicker1)
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label10)
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label11)
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label9)
+        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Panel_Bayar)
+        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Button_Save)
+        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Button_Print)
+        Me.Panel_Apoteker_Kanan.Controls.Add(Me.DateTimePicker_Tanggal_Kasir)
         Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label_Nama_Kasir)
-        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label_Waktu)
+        Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label_Waktu_Kasir)
         Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label_IdObat)
         Me.Panel_Apoteker_Kanan.Controls.Add(Me.SplitContainer_KelolaResep)
         Me.Panel_Apoteker_Kanan.Controls.Add(Me.Label_KelolaObat)
@@ -208,6 +210,130 @@ Partial Class Form_Kasir
         Me.Panel_Apoteker_Kanan.Padding = New System.Windows.Forms.Padding(5)
         Me.Panel_Apoteker_Kanan.Size = New System.Drawing.Size(733, 487)
         Me.Panel_Apoteker_Kanan.TabIndex = 1
+        '
+        'Panel_Bayar
+        '
+        Me.Panel_Bayar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel_Bayar.Controls.Add(Me.TextBox_Bayar)
+        Me.Panel_Bayar.Controls.Add(Me.Button_Bayar)
+        Me.Panel_Bayar.Controls.Add(Me.Label_HargaTotal)
+        Me.Panel_Bayar.Controls.Add(Me.Label_Kembalian)
+        Me.Panel_Bayar.Controls.Add(Me.Label10)
+        Me.Panel_Bayar.Location = New System.Drawing.Point(85, 399)
+        Me.Panel_Bayar.Name = "Panel_Bayar"
+        Me.Panel_Bayar.Size = New System.Drawing.Size(270, 87)
+        Me.Panel_Bayar.TabIndex = 12
+        '
+        'TextBox_Bayar
+        '
+        Me.TextBox_Bayar.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Bayar.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Bayar.Location = New System.Drawing.Point(87, 25)
+        Me.TextBox_Bayar.Name = "TextBox_Bayar"
+        Me.TextBox_Bayar.Size = New System.Drawing.Size(154, 19)
+        Me.TextBox_Bayar.TabIndex = 12
+        '
+        'Button_Bayar
+        '
+        Me.Button_Bayar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button_Bayar.Location = New System.Drawing.Point(6, 24)
+        Me.Button_Bayar.Name = "Button_Bayar"
+        Me.Button_Bayar.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Bayar.TabIndex = 11
+        Me.Button_Bayar.Text = "Bayar"
+        Me.Button_Bayar.UseVisualStyleBackColor = True
+        '
+        'Label_HargaTotal
+        '
+        Me.Label_HargaTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label_HargaTotal.AutoSize = True
+        Me.Label_HargaTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.Label_HargaTotal.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_HargaTotal.Location = New System.Drawing.Point(14, 1)
+        Me.Label_HargaTotal.Name = "Label_HargaTotal"
+        Me.Label_HargaTotal.Size = New System.Drawing.Size(16, 18)
+        Me.Label_HargaTotal.TabIndex = 9
+        Me.Label_HargaTotal.Text = "0"
+        '
+        'Label_Kembalian
+        '
+        Me.Label_Kembalian.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label_Kembalian.AutoSize = True
+        Me.Label_Kembalian.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.Label_Kembalian.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_Kembalian.Location = New System.Drawing.Point(81, 61)
+        Me.Label_Kembalian.Name = "Label_Kembalian"
+        Me.Label_Kembalian.Size = New System.Drawing.Size(16, 18)
+        Me.Label_Kembalian.TabIndex = 9
+        Me.Label_Kembalian.Text = "0"
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(14, 61)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(58, 18)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "Kembali"
+        '
+        'Button_Save
+        '
+        Me.Button_Save.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button_Save.Location = New System.Drawing.Point(529, 437)
+        Me.Button_Save.Name = "Button_Save"
+        Me.Button_Save.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Save.TabIndex = 11
+        Me.Button_Save.Text = "Save"
+        Me.Button_Save.UseVisualStyleBackColor = True
+        '
+        'Button_Print
+        '
+        Me.Button_Print.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button_Print.Location = New System.Drawing.Point(450, 437)
+        Me.Button_Print.Name = "Button_Print"
+        Me.Button_Print.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Print.TabIndex = 11
+        Me.Button_Print.Text = "Print"
+        Me.Button_Print.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker_Tanggal_Kasir
+        '
+        Me.DateTimePicker_Tanggal_Kasir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DateTimePicker_Tanggal_Kasir.CustomFormat = "dd/MM/yyyy"
+        Me.DateTimePicker_Tanggal_Kasir.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker_Tanggal_Kasir.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker_Tanggal_Kasir.Location = New System.Drawing.Point(606, 17)
+        Me.DateTimePicker_Tanggal_Kasir.MinDate = New Date(2020, 1, 1, 0, 0, 0, 0)
+        Me.DateTimePicker_Tanggal_Kasir.Name = "DateTimePicker_Tanggal_Kasir"
+        Me.DateTimePicker_Tanggal_Kasir.Size = New System.Drawing.Size(124, 23)
+        Me.DateTimePicker_Tanggal_Kasir.TabIndex = 10
+        Me.DateTimePicker_Tanggal_Kasir.Value = New Date(2023, 11, 17, 0, 0, 0, 0)
+        '
+        'Label_Nama_Kasir
+        '
+        Me.Label_Nama_Kasir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label_Nama_Kasir.AutoSize = True
+        Me.Label_Nama_Kasir.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Label_Nama_Kasir.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_Nama_Kasir.Location = New System.Drawing.Point(517, 20)
+        Me.Label_Nama_Kasir.Name = "Label_Nama_Kasir"
+        Me.Label_Nama_Kasir.Size = New System.Drawing.Size(83, 18)
+        Me.Label_Nama_Kasir.TabIndex = 9
+        Me.Label_Nama_Kasir.Text = "Nama Kasir"
+        '
+        'Label_Waktu_Kasir
+        '
+        Me.Label_Waktu_Kasir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label_Waktu_Kasir.AutoSize = True
+        Me.Label_Waktu_Kasir.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_Waktu_Kasir.Location = New System.Drawing.Point(582, 0)
+        Me.Label_Waktu_Kasir.Name = "Label_Waktu_Kasir"
+        Me.Label_Waktu_Kasir.Size = New System.Drawing.Size(43, 14)
+        Me.Label_Waktu_Kasir.TabIndex = 9
+        Me.Label_Waktu_Kasir.Text = "Waktu"
         '
         'Label_IdObat
         '
@@ -227,44 +353,58 @@ Partial Class Form_Kasir
         '
         'SplitContainer_KelolaResep.Panel1
         '
-        Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Button2)
-        Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Panel1)
+        Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Button_Tambahkan)
         Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Panel_NamaPasien)
-        Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Panel_TanggalResep)
+        Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Panel_TglResep)
         Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Panel_NoResep)
+        Me.SplitContainer_KelolaResep.Panel1.Controls.Add(Me.Panel_TypeResep)
         Me.SplitContainer_KelolaResep.Panel1.Padding = New System.Windows.Forms.Padding(10)
         '
         'SplitContainer_KelolaResep.Panel2
         '
-        Me.SplitContainer_KelolaResep.Panel2.Controls.Add(Me.Button3)
-        Me.SplitContainer_KelolaResep.Panel2.Controls.Add(Me.Panel_KelolaResep_Cari)
+        Me.SplitContainer_KelolaResep.Panel2.Controls.Add(Me.Button_Kosongkan)
         Me.SplitContainer_KelolaResep.Panel2.Controls.Add(Me.Panel_Quantity)
+        Me.SplitContainer_KelolaResep.Panel2.Controls.Add(Me.Panel_Harga)
         Me.SplitContainer_KelolaResep.Panel2.Controls.Add(Me.Panel_NamaObat)
         Me.SplitContainer_KelolaResep.Panel2.Controls.Add(Me.Panel_NamaDokter)
         Me.SplitContainer_KelolaResep.Panel2.Padding = New System.Windows.Forms.Padding(10)
-        Me.SplitContainer_KelolaResep.Size = New System.Drawing.Size(723, 173)
+        Me.SplitContainer_KelolaResep.Size = New System.Drawing.Size(723, 153)
         Me.SplitContainer_KelolaResep.SplitterDistance = 360
         Me.SplitContainer_KelolaResep.SplitterWidth = 7
         Me.SplitContainer_KelolaResep.TabIndex = 5
         '
-        'Panel1
+        'Button_Tambahkan
         '
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(10, 100)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(340, 30)
-        Me.Panel1.TabIndex = 7
+        Me.Button_Tambahkan.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button_Tambahkan.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Tambahkan.Location = New System.Drawing.Point(80, 125)
+        Me.Button_Tambahkan.Name = "Button_Tambahkan"
+        Me.Button_Tambahkan.Size = New System.Drawing.Size(200, 25)
+        Me.Button_Tambahkan.TabIndex = 11
+        Me.Button_Tambahkan.Text = "Tambahkan"
+        Me.Button_Tambahkan.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'Panel_NamaPasien
         '
-        Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox3.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(100, 0)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(240, 26)
-        Me.TextBox3.TabIndex = 3
+        Me.Panel_NamaPasien.Controls.Add(Me.TextBox_NamaPasien)
+        Me.Panel_NamaPasien.Controls.Add(Me.Label3)
+        Me.Panel_NamaPasien.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_NamaPasien.Location = New System.Drawing.Point(10, 94)
+        Me.Panel_NamaPasien.Name = "Panel_NamaPasien"
+        Me.Panel_NamaPasien.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Panel_NamaPasien.Size = New System.Drawing.Size(340, 28)
+        Me.Panel_NamaPasien.TabIndex = 7
+        '
+        'TextBox_NamaPasien
+        '
+        Me.TextBox_NamaPasien.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_NamaPasien.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TextBox_NamaPasien.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_NamaPasien.Location = New System.Drawing.Point(100, 4)
+        Me.TextBox_NamaPasien.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.TextBox_NamaPasien.Name = "TextBox_NamaPasien"
+        Me.TextBox_NamaPasien.Size = New System.Drawing.Size(240, 19)
+        Me.TextBox_NamaPasien.TabIndex = 3
         '
         'Label3
         '
@@ -272,30 +412,21 @@ Partial Class Form_Kasir
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(0, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 30)
+        Me.Label3.Size = New System.Drawing.Size(100, 23)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Type Resep"
+        Me.Label3.Text = "Nama Pasien"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel_NamaPasien
+        'Panel_TglResep
         '
-        Me.Panel_NamaPasien.Controls.Add(Me.ComboBox2)
-        Me.Panel_NamaPasien.Controls.Add(Me.Label4)
-        Me.Panel_NamaPasien.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_NamaPasien.Location = New System.Drawing.Point(10, 70)
-        Me.Panel_NamaPasien.Name = "Panel_NamaPasien"
-        Me.Panel_NamaPasien.Size = New System.Drawing.Size(340, 30)
-        Me.Panel_NamaPasien.TabIndex = 2
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBox2.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(100, 0)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(240, 26)
-        Me.ComboBox2.TabIndex = 1
+        Me.Panel_TglResep.Controls.Add(Me.Label4)
+        Me.Panel_TglResep.Controls.Add(Me.DateTimePicker_Tgl_Resep)
+        Me.Panel_TglResep.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_TglResep.Location = New System.Drawing.Point(10, 66)
+        Me.Panel_TglResep.Name = "Panel_TglResep"
+        Me.Panel_TglResep.Padding = New System.Windows.Forms.Padding(0, 0, 0, 3)
+        Me.Panel_TglResep.Size = New System.Drawing.Size(340, 28)
+        Me.Panel_TglResep.TabIndex = 2
         '
         'Label4
         '
@@ -303,29 +434,46 @@ Partial Class Form_Kasir
         Me.Label4.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(0, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(100, 30)
+        Me.Label4.Size = New System.Drawing.Size(100, 25)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Type Resep"
+        Me.Label4.Text = "Tgl Resep"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel_TanggalResep
+        'DateTimePicker_Tgl_Resep
         '
-        Me.Panel_TanggalResep.Controls.Add(Me.TextBox2)
-        Me.Panel_TanggalResep.Controls.Add(Me.Label2)
-        Me.Panel_TanggalResep.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_TanggalResep.Location = New System.Drawing.Point(10, 40)
-        Me.Panel_TanggalResep.Name = "Panel_TanggalResep"
-        Me.Panel_TanggalResep.Size = New System.Drawing.Size(340, 30)
-        Me.Panel_TanggalResep.TabIndex = 1
+        Me.DateTimePicker_Tgl_Resep.CalendarFont = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker_Tgl_Resep.CustomFormat = "dd/MM/yyyy"
+        Me.DateTimePicker_Tgl_Resep.Dock = System.Windows.Forms.DockStyle.Right
+        Me.DateTimePicker_Tgl_Resep.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker_Tgl_Resep.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker_Tgl_Resep.Location = New System.Drawing.Point(100, 0)
+        Me.DateTimePicker_Tgl_Resep.MinDate = New Date(2020, 1, 1, 0, 0, 0, 0)
+        Me.DateTimePicker_Tgl_Resep.Name = "DateTimePicker_Tgl_Resep"
+        Me.DateTimePicker_Tgl_Resep.Size = New System.Drawing.Size(240, 26)
+        Me.DateTimePicker_Tgl_Resep.TabIndex = 10
+        Me.DateTimePicker_Tgl_Resep.Value = New Date(2023, 11, 17, 0, 0, 0, 0)
         '
-        'TextBox2
+        'Panel_NoResep
         '
-        Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox2.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(100, 0)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(240, 26)
-        Me.TextBox2.TabIndex = 3
+        Me.Panel_NoResep.Controls.Add(Me.TextBox_NoResep)
+        Me.Panel_NoResep.Controls.Add(Me.Label2)
+        Me.Panel_NoResep.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_NoResep.Location = New System.Drawing.Point(10, 38)
+        Me.Panel_NoResep.Name = "Panel_NoResep"
+        Me.Panel_NoResep.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Panel_NoResep.Size = New System.Drawing.Size(340, 28)
+        Me.Panel_NoResep.TabIndex = 1
+        '
+        'TextBox_NoResep
+        '
+        Me.TextBox_NoResep.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_NoResep.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TextBox_NoResep.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_NoResep.Location = New System.Drawing.Point(100, 4)
+        Me.TextBox_NoResep.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.TextBox_NoResep.Name = "TextBox_NoResep"
+        Me.TextBox_NoResep.Size = New System.Drawing.Size(240, 19)
+        Me.TextBox_NoResep.TabIndex = 3
         '
         'Label2
         '
@@ -333,30 +481,33 @@ Partial Class Form_Kasir
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(0, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 30)
+        Me.Label2.Size = New System.Drawing.Size(100, 23)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Type Resep"
+        Me.Label2.Text = "No Resep"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel_NoResep
+        'Panel_TypeResep
         '
-        Me.Panel_NoResep.Controls.Add(Me.ComboBox1)
-        Me.Panel_NoResep.Controls.Add(Me.Label1)
-        Me.Panel_NoResep.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_NoResep.Location = New System.Drawing.Point(10, 10)
-        Me.Panel_NoResep.Name = "Panel_NoResep"
-        Me.Panel_NoResep.Size = New System.Drawing.Size(340, 30)
-        Me.Panel_NoResep.TabIndex = 0
+        Me.Panel_TypeResep.Controls.Add(Me.ComboBox_TypeResep)
+        Me.Panel_TypeResep.Controls.Add(Me.Label1)
+        Me.Panel_TypeResep.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_TypeResep.Location = New System.Drawing.Point(10, 10)
+        Me.Panel_TypeResep.Name = "Panel_TypeResep"
+        Me.Panel_TypeResep.Padding = New System.Windows.Forms.Padding(0, 0, 0, 3)
+        Me.Panel_TypeResep.Size = New System.Drawing.Size(340, 28)
+        Me.Panel_TypeResep.TabIndex = 0
         '
-        'ComboBox1
+        'ComboBox_TypeResep
         '
-        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ComboBox1.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(100, 0)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(240, 26)
-        Me.ComboBox1.TabIndex = 1
+        Me.ComboBox_TypeResep.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox_TypeResep.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_TypeResep.FormattingEnabled = True
+        Me.ComboBox_TypeResep.Items.AddRange(New Object() {"Resep", "Non Resep"})
+        Me.ComboBox_TypeResep.Location = New System.Drawing.Point(100, 0)
+        Me.ComboBox_TypeResep.Name = "ComboBox_TypeResep"
+        Me.ComboBox_TypeResep.Size = New System.Drawing.Size(240, 26)
+        Me.ComboBox_TypeResep.TabIndex = 1
+        Me.ComboBox_TypeResep.Text = "Resep"
         '
         'Label1
         '
@@ -364,29 +515,43 @@ Partial Class Form_Kasir
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 30)
+        Me.Label1.Size = New System.Drawing.Size(100, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Type Resep"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel_KelolaResep_Cari
+        'Button_Kosongkan
         '
-        Me.Panel_KelolaResep_Cari.Controls.Add(Me.TextBox8)
-        Me.Panel_KelolaResep_Cari.Controls.Add(Me.Label8)
-        Me.Panel_KelolaResep_Cari.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_KelolaResep_Cari.Location = New System.Drawing.Point(10, 100)
-        Me.Panel_KelolaResep_Cari.Name = "Panel_KelolaResep_Cari"
-        Me.Panel_KelolaResep_Cari.Size = New System.Drawing.Size(336, 30)
-        Me.Panel_KelolaResep_Cari.TabIndex = 6
+        Me.Button_Kosongkan.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button_Kosongkan.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Kosongkan.Location = New System.Drawing.Point(80, 125)
+        Me.Button_Kosongkan.Name = "Button_Kosongkan"
+        Me.Button_Kosongkan.Size = New System.Drawing.Size(200, 25)
+        Me.Button_Kosongkan.TabIndex = 11
+        Me.Button_Kosongkan.Text = "Kosongkan"
+        Me.Button_Kosongkan.UseVisualStyleBackColor = True
         '
-        'TextBox8
+        'Panel_Quantity
         '
-        Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox8.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(100, 0)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(236, 26)
-        Me.TextBox8.TabIndex = 3
+        Me.Panel_Quantity.Controls.Add(Me.TextBox_Quantity)
+        Me.Panel_Quantity.Controls.Add(Me.Label8)
+        Me.Panel_Quantity.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_Quantity.Location = New System.Drawing.Point(10, 94)
+        Me.Panel_Quantity.Name = "Panel_Quantity"
+        Me.Panel_Quantity.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Panel_Quantity.Size = New System.Drawing.Size(336, 28)
+        Me.Panel_Quantity.TabIndex = 6
+        '
+        'TextBox_Quantity
+        '
+        Me.TextBox_Quantity.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Quantity.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TextBox_Quantity.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Quantity.Location = New System.Drawing.Point(100, 4)
+        Me.TextBox_Quantity.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.TextBox_Quantity.Name = "TextBox_Quantity"
+        Me.TextBox_Quantity.Size = New System.Drawing.Size(236, 19)
+        Me.TextBox_Quantity.TabIndex = 3
         '
         'Label8
         '
@@ -394,29 +559,32 @@ Partial Class Form_Kasir
         Me.Label8.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(0, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(100, 30)
+        Me.Label8.Size = New System.Drawing.Size(100, 23)
         Me.Label8.TabIndex = 2
-        Me.Label8.Text = "Type Resep"
+        Me.Label8.Text = "Quantity"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel_Quantity
+        'Panel_Harga
         '
-        Me.Panel_Quantity.Controls.Add(Me.TextBox7)
-        Me.Panel_Quantity.Controls.Add(Me.Label7)
-        Me.Panel_Quantity.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_Quantity.Location = New System.Drawing.Point(10, 70)
-        Me.Panel_Quantity.Name = "Panel_Quantity"
-        Me.Panel_Quantity.Size = New System.Drawing.Size(336, 30)
-        Me.Panel_Quantity.TabIndex = 5
+        Me.Panel_Harga.Controls.Add(Me.TextBox_Harga)
+        Me.Panel_Harga.Controls.Add(Me.Label7)
+        Me.Panel_Harga.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_Harga.Location = New System.Drawing.Point(10, 66)
+        Me.Panel_Harga.Name = "Panel_Harga"
+        Me.Panel_Harga.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Panel_Harga.Size = New System.Drawing.Size(336, 28)
+        Me.Panel_Harga.TabIndex = 5
         '
-        'TextBox7
+        'TextBox_Harga
         '
-        Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox7.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(100, 0)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(236, 26)
-        Me.TextBox7.TabIndex = 3
+        Me.TextBox_Harga.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Harga.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TextBox_Harga.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Harga.Location = New System.Drawing.Point(100, 4)
+        Me.TextBox_Harga.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.TextBox_Harga.Name = "TextBox_Harga"
+        Me.TextBox_Harga.Size = New System.Drawing.Size(236, 19)
+        Me.TextBox_Harga.TabIndex = 3
         '
         'Label7
         '
@@ -424,29 +592,32 @@ Partial Class Form_Kasir
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(0, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(100, 30)
+        Me.Label7.Size = New System.Drawing.Size(100, 23)
         Me.Label7.TabIndex = 2
-        Me.Label7.Text = "Type Resep"
+        Me.Label7.Text = "Harga"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel_NamaObat
         '
-        Me.Panel_NamaObat.Controls.Add(Me.TextBox6)
+        Me.Panel_NamaObat.Controls.Add(Me.TextBox_NamaObat)
         Me.Panel_NamaObat.Controls.Add(Me.Label6)
         Me.Panel_NamaObat.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_NamaObat.Location = New System.Drawing.Point(10, 40)
+        Me.Panel_NamaObat.Location = New System.Drawing.Point(10, 38)
         Me.Panel_NamaObat.Name = "Panel_NamaObat"
-        Me.Panel_NamaObat.Size = New System.Drawing.Size(336, 30)
+        Me.Panel_NamaObat.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Panel_NamaObat.Size = New System.Drawing.Size(336, 28)
         Me.Panel_NamaObat.TabIndex = 4
         '
-        'TextBox6
+        'TextBox_NamaObat
         '
-        Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox6.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(100, 0)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(236, 26)
-        Me.TextBox6.TabIndex = 3
+        Me.TextBox_NamaObat.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_NamaObat.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TextBox_NamaObat.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_NamaObat.Location = New System.Drawing.Point(100, 4)
+        Me.TextBox_NamaObat.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.TextBox_NamaObat.Name = "TextBox_NamaObat"
+        Me.TextBox_NamaObat.Size = New System.Drawing.Size(236, 19)
+        Me.TextBox_NamaObat.TabIndex = 3
         '
         'Label6
         '
@@ -454,29 +625,32 @@ Partial Class Form_Kasir
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(0, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 30)
+        Me.Label6.Size = New System.Drawing.Size(100, 23)
         Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Type Resep"
+        Me.Label6.Text = "Nama Obat"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel_NamaDokter
         '
-        Me.Panel_NamaDokter.Controls.Add(Me.TextBox5)
+        Me.Panel_NamaDokter.Controls.Add(Me.TextBox_NamaDokter)
         Me.Panel_NamaDokter.Controls.Add(Me.Label5)
         Me.Panel_NamaDokter.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_NamaDokter.Location = New System.Drawing.Point(10, 10)
         Me.Panel_NamaDokter.Name = "Panel_NamaDokter"
-        Me.Panel_NamaDokter.Size = New System.Drawing.Size(336, 30)
+        Me.Panel_NamaDokter.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Panel_NamaDokter.Size = New System.Drawing.Size(336, 28)
         Me.Panel_NamaDokter.TabIndex = 3
         '
-        'TextBox5
+        'TextBox_NamaDokter
         '
-        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox5.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(100, 0)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(236, 26)
-        Me.TextBox5.TabIndex = 3
+        Me.TextBox_NamaDokter.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_NamaDokter.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TextBox_NamaDokter.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_NamaDokter.Location = New System.Drawing.Point(100, 4)
+        Me.TextBox_NamaDokter.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.TextBox_NamaDokter.Name = "TextBox_NamaDokter"
+        Me.TextBox_NamaDokter.Size = New System.Drawing.Size(236, 19)
+        Me.TextBox_NamaDokter.TabIndex = 3
         '
         'Label5
         '
@@ -484,9 +658,9 @@ Partial Class Form_Kasir
         Me.Label5.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 30)
+        Me.Label5.Size = New System.Drawing.Size(100, 23)
         Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Type Resep"
+        Me.Label5.Text = "Nama Dokter"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label_KelolaObat
@@ -498,7 +672,7 @@ Partial Class Form_Kasir
         Me.Label_KelolaObat.Name = "Label_KelolaObat"
         Me.Label_KelolaObat.Size = New System.Drawing.Size(723, 35)
         Me.Label_KelolaObat.TabIndex = 6
-        Me.Label_KelolaObat.Text = "Kelola Transaksi"
+        Me.Label_KelolaObat.Text = "Form Transaksi"
         '
         'DataGridView_KelolaResep
         '
@@ -506,132 +680,13 @@ Partial Class Form_Kasir
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView_KelolaResep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView_KelolaResep.Location = New System.Drawing.Point(5, 219)
+        Me.DataGridView_KelolaResep.Location = New System.Drawing.Point(5, 199)
         Me.DataGridView_KelolaResep.Name = "DataGridView_KelolaResep"
-        Me.DataGridView_KelolaResep.Size = New System.Drawing.Size(723, 191)
+        Me.DataGridView_KelolaResep.Size = New System.Drawing.Size(723, 194)
         Me.DataGridView_KelolaResep.TabIndex = 7
         '
-        'Label_Waktu
+        'Timer1
         '
-        Me.Label_Waktu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label_Waktu.AutoSize = True
-        Me.Label_Waktu.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_Waktu.Location = New System.Drawing.Point(591, 0)
-        Me.Label_Waktu.Name = "Label_Waktu"
-        Me.Label_Waktu.Size = New System.Drawing.Size(43, 14)
-        Me.Label_Waktu.TabIndex = 9
-        Me.Label_Waktu.Text = "Waktu"
-        '
-        'Label_Nama_Kasir
-        '
-        Me.Label_Nama_Kasir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label_Nama_Kasir.AutoSize = True
-        Me.Label_Nama_Kasir.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Label_Nama_Kasir.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_Nama_Kasir.Location = New System.Drawing.Point(526, 20)
-        Me.Label_Nama_Kasir.Name = "Label_Nama_Kasir"
-        Me.Label_Nama_Kasir.Size = New System.Drawing.Size(83, 18)
-        Me.Label_Nama_Kasir.TabIndex = 9
-        Me.Label_Nama_Kasir.Text = "Nama Kasir"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.CustomFormat = "dd/MM/yyyy"
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(640, 17)
-        Me.DateTimePicker1.MinDate = New Date(2020, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(90, 23)
-        Me.DateTimePicker1.TabIndex = 10
-        Me.DateTimePicker1.Value = New Date(2023, 11, 17, 0, 0, 0, 0)
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Label9.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(92, 416)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(83, 18)
-        Me.Label9.TabIndex = 9
-        Me.Label9.Text = "Nama Kasir"
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Label11.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(181, 464)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(83, 18)
-        Me.Label11.TabIndex = 9
-        Me.Label11.Text = "Nama Kasir"
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Label10.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(92, 464)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(83, 18)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "Nama Kasir"
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(95, 437)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(90, 150)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(169, 23)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Button1"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(78, 150)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(169, 23)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Button1"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(450, 437)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Button1"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Location = New System.Drawing.Point(529, 437)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 11
-        Me.Button5.Text = "Button1"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'Form_Kasir
         '
@@ -650,20 +705,22 @@ Partial Class Form_Kasir
         Me.Panel_Admin_Kanan.ResumeLayout(False)
         Me.Panel_Apoteker_Kanan.ResumeLayout(False)
         Me.Panel_Apoteker_Kanan.PerformLayout()
+        Me.Panel_Bayar.ResumeLayout(False)
+        Me.Panel_Bayar.PerformLayout()
         Me.SplitContainer_KelolaResep.Panel1.ResumeLayout(False)
         Me.SplitContainer_KelolaResep.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer_KelolaResep, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer_KelolaResep.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel_NamaPasien.ResumeLayout(False)
-        Me.Panel_TanggalResep.ResumeLayout(False)
-        Me.Panel_TanggalResep.PerformLayout()
+        Me.Panel_NamaPasien.PerformLayout()
+        Me.Panel_TglResep.ResumeLayout(False)
         Me.Panel_NoResep.ResumeLayout(False)
-        Me.Panel_KelolaResep_Cari.ResumeLayout(False)
-        Me.Panel_KelolaResep_Cari.PerformLayout()
+        Me.Panel_NoResep.PerformLayout()
+        Me.Panel_TypeResep.ResumeLayout(False)
         Me.Panel_Quantity.ResumeLayout(False)
         Me.Panel_Quantity.PerformLayout()
+        Me.Panel_Harga.ResumeLayout(False)
+        Me.Panel_Harga.PerformLayout()
         Me.Panel_NamaObat.ResumeLayout(False)
         Me.Panel_NamaObat.PerformLayout()
         Me.Panel_NamaDokter.ResumeLayout(False)
@@ -683,41 +740,44 @@ Partial Class Form_Kasir
     Friend WithEvents Panel_Apoteker_Kanan As Panel
     Friend WithEvents Label_IdObat As Label
     Friend WithEvents SplitContainer_KelolaResep As SplitContainer
-    Friend WithEvents Panel_NamaPasien As Panel
-    Friend WithEvents Panel_TanggalResep As Panel
+    Friend WithEvents Panel_TglResep As Panel
     Friend WithEvents Panel_NoResep As Panel
-    Friend WithEvents Panel_KelolaResep_Cari As Panel
+    Friend WithEvents Panel_TypeResep As Panel
     Friend WithEvents Panel_Quantity As Panel
+    Friend WithEvents Panel_Harga As Panel
     Friend WithEvents Panel_NamaObat As Panel
     Friend WithEvents Panel_NamaDokter As Panel
     Friend WithEvents Label_KelolaObat As Label
     Friend WithEvents DataGridView_KelolaResep As DataGridView
     Friend WithEvents Label1 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Panel_NamaPasien As Panel
+    Friend WithEvents TextBox_NoResep As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox_NamaPasien As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox_Quantity As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox_Harga As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox_NamaObat As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox_NamaDokter As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label_Waktu As Label
+    Friend WithEvents ComboBox_TypeResep As ComboBox
+    Friend WithEvents Label_Waktu_Kasir As Label
     Friend WithEvents Label_Nama_Kasir As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents DateTimePicker_Tanggal_Kasir As DateTimePicker
+    Friend WithEvents Label_HargaTotal As Label
+    Friend WithEvents Label_Kembalian As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents Button_Bayar As Button
+    Friend WithEvents Button_Tambahkan As Button
+    Friend WithEvents Button_Kosongkan As Button
+    Friend WithEvents Button_Save As Button
+    Friend WithEvents Button_Print As Button
+    Friend WithEvents DateTimePicker_Tgl_Resep As DateTimePicker
+    Friend WithEvents Panel_Bayar As Panel
+    Friend WithEvents TextBox_Bayar As TextBox
+    Friend WithEvents Timer1 As Timer
 End Class
